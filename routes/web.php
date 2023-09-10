@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Admin\LoginController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -15,14 +16,10 @@ use Illuminate\Support\Facades\Route;
 
 
 
-Route::get('home', function () {
-    return view('frontend.homePage');
-});
+Route::prefix('admin')->group(function(){
+    Route::prefix('login')->group(function (){
+        Route::get('',[LoginController::class, 'landscape'])->name('admin.login.landscape');
+        Route::post('',[LoginController::class, 'check'])->name('admin.login.check');
+    });
 
-Route::get('admin/index', function() {
-    return view('admin.index');
-});
-
-Route::get('login', function () {
-    return view('admin.login.login');
 });
