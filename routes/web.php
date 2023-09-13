@@ -6,6 +6,7 @@ use App\Http\Controllers\Admin\LoginController;
 use App\Http\Controllers\Admin\PodcastsController;
 use App\Http\Controllers\Admin\UsersController;
 use App\Http\Controllers\Admin\WebinarsController;
+use App\Http\Controllers\Home\AccueilController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -15,7 +16,7 @@ use Illuminate\Support\Facades\Route;
 |
 | Here is where you can register web routes for your application. These
 | routes are loaded by the RouteServiceProvider and all of them will
-| be assigned to the "web" middleware group. Make something great!
+| be assigned to the "web" middleware group این خط یعنی چی؟ ما که وب میدل ور نداریم، کجاس این؟. Make something great!
 |
 */
 
@@ -24,7 +25,7 @@ use Illuminate\Support\Facades\Route;
 Route::prefix('admin')->group(function(){
     Route::get('', function (){
         return view('admin.index');
-    });
+    })->name('admin.index');
     Route::prefix('users')->group(function (){
         Route::get('',[UsersController::class, 'landscape'])->name('admin.users.landscape');
         Route::get('create',[UsersController::class, 'create'])->name('admin.users.create');
@@ -51,4 +52,8 @@ Route::prefix('admin')->group(function(){
             Route::get('create',[ArticlesController::class, 'create'])->name('admin.articles.create');
         });
 
+});
+
+Route::prefix('')->group(function (){
+    Route::get('',[AccueilController::class, 'landscape'])->name('home.landscape');
 });

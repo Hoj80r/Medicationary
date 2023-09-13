@@ -2,7 +2,7 @@
    <div id="sidebar" class="col-3 float-end position-fixed d-flex flex-column justify-content-center overflow-y-scroll">
     <!-- sidebar title -->
     <div id="aide-header" class="text-center">
-      <h2><a href="admin-main-page.html" title="برگشت به صفحه اصلی سایت">Medicationary</a></h2>
+      <h2><a href="{{ route('admin.index') }}" title="برگشت به صفحه اصلی سایت">Medicationary</a></h2>
     </div>
     <!-- menu items -->
     <div id="sidebar-items" class="d-flex flex-wrap justify-content-around">
@@ -16,9 +16,9 @@
             <path id="Path_221" data-name="Path 221" d="M19.34,27.14a2,2,0,0,0-1.47-.65H14.13a2,2,0,0,0-2,2v1.25H19m14.42-8.27a2,2,0,0,0-2.84,0h0a2.015,2.015,0,1,0,2.82.01ZM29,29.74h6.86V28.49a2,2,0,0,0-2-2H30.13a2,2,0,0,0-1.47.65" fill="rgba(255,255,255,0)" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
           </g>
         </svg>
-        
-        <p class="d-inline text-center pt-3">وبینار</p> 
-        
+
+        <p class="d-inline text-center pt-3">وبینار</p>
+
         <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18.1" height="28.4" viewBox="0 0 18.1 28.4">
           <defs>
             <clipPath id="clip-path">
@@ -29,14 +29,14 @@
             <path id="Path_36" data-name="Path 36" d="M14.2,18.1,0,4.154,4.23,0,14.2,9.792,24.17,0,28.4,4.154Z" transform="translate(18.1) rotate(90)" fill="#fff"/>
           </g>
         </svg>
-        
-        
+
+
       </button>
       <!-- webinar items -->
       <div id="webinar-item" class="collap-data collapse text-center col-10">
         <ul>
           <!-- webinar upload -->
-          <a href="admin-webinar-up.html"><li id="webinar1">
+          <a href="{{route('admin.webinars.create')}}"><li id="webinar1">
             <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="16" height="15.999" viewBox="0 0 16 15.999">
             <defs>
               <clipPath id="clip-path">
@@ -49,10 +49,10 @@
           </svg>
           افزودن وبینار</li></a>
           <!-- webinar list -->
-          <a href="admin-webinar-list.html"><li id="webinar2">
+          <a href=" {{ route('admin.webinars.landscape') }}"><li id="webinar2">
             <svg xmlns="http://www.w3.org/2000/svg" width="18" height="10" viewBox="0 0 18 10">
             <path id="list-sharp" d="M4,17a1,1,0,1,1,0-2,1,1,0,1,1,0,2Zm0-4a1,1,0,1,1,0-2,1,1,0,1,1,0,2ZM4,9A1,1,0,1,1,4,7,1,1,0,1,1,4,9Zm3,8V15H21v2Zm0-4V11H21v2ZM7,9V7H21V9Z" transform="translate(-3 -7)" fill="#fff"/>
-          </svg>   
+          </svg>
           لیست وبینار‌ها</li></a>
           <!-- webinar category -->
           <a href="#"><li id="webinar3">
@@ -67,10 +67,10 @@
         <svg xmlns="http://www.w3.org/2000/svg" width="26.448" height="34.93" viewBox="0 0 26.448 34.93">
           <path id="articles" d="M277.206,12.724v2.121H260.241V12.724Zm-4.241-8.483V6.362H260.241V4.241Zm-4.241,25.448v-10.6h8.483v10.6Zm2.121-8.483v6.362h4.241V21.206Zm6.362-12.724V10.6H260.241V8.483ZM256,0h25.448V33.93H256Zm23.327,31.81V2.121H258.121V31.81ZM266.6,27.568v2.121h-6.362V27.568Zm0-8.483v2.121h-6.362V19.086Zm0,4.241v2.121h-6.362V23.327Z" transform="translate(-255.5 0.5)" fill="#fff" stroke="#04355c" stroke-width="1"/>
         </svg>
-        
-        
-        <p class="d-inline text-center pt-3">مقالات</p> 
-        
+
+
+        <p class="d-inline text-center pt-3">مقالات</p>
+
         <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18.1" height="28.4" viewBox="0 0 18.1 28.4">
           <defs>
             <clipPath id="clip-path">
@@ -81,14 +81,14 @@
             <path id="Path_36" data-name="Path 36" d="M14.2,18.1,0,4.154,4.23,0,14.2,9.792,24.17,0,28.4,4.154Z" transform="translate(18.1) rotate(90)" fill="#fff"/>
           </g>
         </svg>
-        
-        
+
+
       </button>
       <!-- blog items -->
       <div id="blog-item" class="collap-data collapse text-center col-10">
         <ul id="side-item">
           <!-- blog upload -->
-          <a href="admin-blog-up.html"><li id="webinar1">
+          <a href="{{ route('admin.articles.create') }}"><li id="webinar1">
             <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="16" height="15.999" viewBox="0 0 16 15.999">
             <defs>
               <clipPath id="clip-path">
@@ -101,7 +101,7 @@
           </svg>
           افزودن مقاله</li></a>
           <!-- blog list -->
-          <a href="admin-blog-list.html"><li id="webinar2">
+          <a href="{{ route('admin.articles.landscape') }}"><li id="webinar2">
             <svg xmlns="http://www.w3.org/2000/svg" width="18" height="10" viewBox="0 0 18 10">
             <path id="list-sharp" d="M4,17a1,1,0,1,1,0-2,1,1,0,1,1,0,2Zm0-4a1,1,0,1,1,0-2,1,1,0,1,1,0,2ZM4,9A1,1,0,1,1,4,7,1,1,0,1,1,4,9Zm3,8V15H21v2Zm0-4V11H21v2ZM7,9V7H21V9Z" transform="translate(-3 -7)" fill="#fff"/>
           </svg>
@@ -119,10 +119,10 @@
         <svg xmlns="http://www.w3.org/2000/svg" width="32.298" height="32.298" viewBox="0 0 32.298 32.298">
           <path id="person-question-mark-24-filled" d="M17.034,20a9.751,9.751,0,0,0,.854,11.644A19.73,19.73,0,0,1,14,32c-5.131,0-8.917-1.61-11.23-4.856A4.126,4.126,0,0,1,2,24.754v-1.38A3.374,3.374,0,0,1,5.378,20Zm8.217-3A8.251,8.251,0,1,1,17,25.251,8.251,8.251,0,0,1,25.251,17Zm0,11.628a.938.938,0,1,0,.938.938A.938.938,0,0,0,25.251,28.628Zm0-8.817a2.776,2.776,0,0,0-2.78,2.933.75.75,0,1,0,1.5-.015,1.28,1.28,0,0,1,1.28-1.418,1.327,1.327,0,0,1,1.281,1.425,1.269,1.269,0,0,1-.336.842l-.141.174-.15.17-.4.435-.206.237a2.75,2.75,0,0,0-.8,1.965.75.75,0,0,0,1.5,0,1.318,1.318,0,0,1,.36-.885l.126-.158.152-.173.4-.435.2-.234a2.716,2.716,0,0,0,.792-1.938,2.823,2.823,0,0,0-2.781-2.925ZM14,2A7.5,7.5,0,1,1,6.5,9.5,7.5,7.5,0,0,1,14,2Z" transform="translate(-1.604 -1.604)" fill="#fff" stroke="#04355c" stroke-width="0.8"/>
         </svg>
-        
-        
-        <p class="d-inline text-center pt-3">پرسش‌ها</p> 
-        
+
+
+        <p class="d-inline text-center pt-3">پرسش‌ها</p>
+
         <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18.1" height="28.4" viewBox="0 0 18.1 28.4">
           <defs>
             <clipPath id="clip-path">
@@ -133,14 +133,14 @@
             <path id="Path_36" data-name="Path 36" d="M14.2,18.1,0,4.154,4.23,0,14.2,9.792,24.17,0,28.4,4.154Z" transform="translate(18.1) rotate(90)" fill="#fff"/>
           </g>
         </svg>
-        
-        
+
+
       </button>
       <!-- ask items -->
       <div id="ask-item" class="collap-data collapse text-center col-10">
         <ul id="side-item">
           <!-- ask upload -->
-          <a href="admin-ask-main.html"><li id="webinar1">
+          <a href="{{ route('admin.inquiries.addInquiry') }}"><li id="webinar1">
             <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="16" height="15.999" viewBox="0 0 16 15.999">
             <defs>
               <clipPath id="clip-path">
@@ -153,7 +153,7 @@
           </svg>
           افزودن پرسش</li></a>
           <!-- ask list -->
-          <a href="admin-ask-list.html"><li id="webinar2">
+          <a href="{{ route('admin.inquiries.landscape') }}"><li id="webinar2">
             <svg xmlns="http://www.w3.org/2000/svg" width="18" height="10" viewBox="0 0 18 10">
             <path id="list-sharp" d="M4,17a1,1,0,1,1,0-2,1,1,0,1,1,0,2Zm0-4a1,1,0,1,1,0-2,1,1,0,1,1,0,2ZM4,9A1,1,0,1,1,4,7,1,1,0,1,1,4,9Zm3,8V15H21v2Zm0-4V11H21v2ZM7,9V7H21V9Z" transform="translate(-3 -7)" fill="#fff"/>
           </svg>
@@ -171,10 +171,10 @@
         <svg xmlns="http://www.w3.org/2000/svg" width="43.924" height="42.647" viewBox="0 0 43.924 42.647">
           <path id="podcast" d="M21.712,17.653a21.709,21.709,0,0,0-7.907,41.928V57.668a19.938,19.938,0,1,1,15.813,0v1.913a21.709,21.709,0,0,0-7.907-41.928ZM21.7,21.96a14.808,14.808,0,0,0-7.286,27.7V48.075a13.455,13.455,0,1,1,14.572,0v1.584A14.806,14.806,0,0,0,21.7,21.96Zm.007,4.8A8.844,8.844,0,0,0,15.55,41.95V39.869a7.494,7.494,0,1,1,12.331,0v2.073a8.844,8.844,0,0,0-6.169-15.185Zm0,4.614a4.231,4.231,0,1,0,4.234,4.234A4.235,4.235,0,0,0,21.712,31.371Zm0,9.557c-5.076,0-5.14,1.869-5.14,1.869a70.229,70.229,0,0,0,.438,8.308,83.173,83.173,0,0,0,2.365,8.7h4.672a83.884,83.884,0,0,0,2.365-8.717,70.091,70.091,0,0,0,.438-8.286s-.064-1.869-5.14-1.869Z" transform="translate(0.25 -17.403)" fill="#fff" stroke="#04355c" stroke-width="0.5"/>
         </svg>
-        
-        
-        <p class="d-inline text-center pt-3">پادکست</p> 
-        
+
+
+        <p class="d-inline text-center pt-3">پادکست</p>
+
         <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18.1" height="28.4" viewBox="0 0 18.1 28.4">
           <defs>
             <clipPath id="clip-path">
@@ -185,14 +185,14 @@
             <path id="Path_36" data-name="Path 36" d="M14.2,18.1,0,4.154,4.23,0,14.2,9.792,24.17,0,28.4,4.154Z" transform="translate(18.1) rotate(90)" fill="#fff"/>
           </g>
         </svg>
-        
-        
+
+
       </button>
       <!-- poidcast items -->
       <div id="podcast-item" class="collap-data collapse text-center col-10">
         <ul id="side-item">
           <!-- podcast upload -->
-          <a href="adsmin-pod-up.html"><li id="webinar1">
+          <a href="{{ route('admin.podcasts.create') }}"><li id="webinar1">
             <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="16" height="15.999" viewBox="0 0 16 15.999">
             <defs>
               <clipPath id="clip-path">
@@ -205,7 +205,7 @@
           </svg>
           افزودن پادکست</li></a>
           <!-- podcast list -->
-          <a href="admin-pod-list.html"><li id="webinar2">
+          <a href="{{ route('admin.podcasts.landscape') }}"><li id="webinar2">
             <svg xmlns="http://www.w3.org/2000/svg" width="18" height="10" viewBox="0 0 18 10">
             <path id="list-sharp" d="M4,17a1,1,0,1,1,0-2,1,1,0,1,1,0,2Zm0-4a1,1,0,1,1,0-2,1,1,0,1,1,0,2ZM4,9A1,1,0,1,1,4,7,1,1,0,1,1,4,9Zm3,8V15H21v2Zm0-4V11H21v2ZM7,9V7H21V9Z" transform="translate(-3 -7)" fill="#fff"/>
           </svg>
@@ -226,10 +226,10 @@
             <path d="M -4002.100830078125 -5509.98193359375 L -3973.49267578125 -5514.513671875 C -3973.927978515625 -5516.56591796875 -3974.812255859375 -5518.5146484375 -3976.07861328125 -5520.2001953125 C -3977.51904296875 -5522.11767578125 -3979.427001953125 -5523.66162109375 -3981.595947265625 -5524.66552734375 L -3982.940185546875 -5525.2880859375 L -3981.86083984375 -5526.30224609375 C -3980.131103515625 -5527.9267578125 -3979.1787109375 -5530.1279296875 -3979.1787109375 -5532.49951171875 C -3979.1787109375 -5537.18701171875 -3982.9921875 -5541.00048828125 -3987.6796875 -5541.00048828125 C -3992.366455078125 -5541.00048828125 -3996.17919921875 -5537.18701171875 -3996.17919921875 -5532.49951171875 C -3996.17919921875 -5530.12744140625 -3995.226806640625 -5527.92724609375 -3993.497314453125 -5526.30322265625 L -3992.41748046875 -5525.2890625 L -3993.76171875 -5524.6669921875 C -3996.23974609375 -5523.51953125 -3998.339599609375 -5521.701171875 -3999.834716796875 -5519.40771484375 C -4001.368408203125 -5517.0556640625 -4002.17919921875 -5514.32080078125 -4002.17919921875 -5511.4990234375 C -4002.17919921875 -5510.9921875 -4002.15283203125 -5510.48486328125 -4002.100830078125 -5509.98193359375 M -4002.9501953125 -5508.8349609375 L -4002.951416015625 -5508.8359375 C -4003.1025390625 -5509.70947265625 -4003.17919921875 -5510.60546875 -4003.17919921875 -5511.4990234375 C -4003.17919921875 -5514.51513671875 -4002.3125 -5517.43896484375 -4000.67236328125 -5519.9541015625 C -3999.07470703125 -5522.40478515625 -3996.830322265625 -5524.34814453125 -3994.181884765625 -5525.57421875 C -3996.11474609375 -5527.38916015625 -3997.17919921875 -5529.84912109375 -3997.17919921875 -5532.49951171875 C -3997.17919921875 -5537.73828125 -3992.917724609375 -5542.00048828125 -3987.6796875 -5542.00048828125 C -3982.44091796875 -5542.00048828125 -3978.1787109375 -5537.73828125 -3978.1787109375 -5532.49951171875 C -3978.1787109375 -5529.84912109375 -3979.2431640625 -5527.38916015625 -3981.176025390625 -5525.5732421875 C -3978.857177734375 -5524.5 -3976.81787109375 -5522.84912109375 -3975.279052734375 -5520.80078125 C -3973.7138671875 -5518.7177734375 -3972.694580078125 -5516.25732421875 -3972.33154296875 -5513.68505859375 L -4002.9501953125 -5508.8349609375 Z" stroke="none" fill="#04355c"/>
           </g>
         </svg>
-        
-        
-        <p class="d-inline text-center pt-3">کاربران</p> 
-        
+
+
+        <p class="d-inline text-center pt-3">کاربران</p>
+
         <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18.1" height="28.4" viewBox="0 0 18.1 28.4">
           <defs>
             <clipPath id="clip-path">
@@ -240,14 +240,14 @@
             <path id="Path_36" data-name="Path 36" d="M14.2,18.1,0,4.154,4.23,0,14.2,9.792,24.17,0,28.4,4.154Z" transform="translate(18.1) rotate(90)" fill="#fff"/>
           </g>
         </svg>
-        
-        
+
+
       </button>
       <!-- user items -->
       <div id="users-item" class="collap-data collapse text-center col-10">
         <ul id="side-item">
           <!-- add user -->
-          <a href="admin-add-users-main.html"><li id="webinar1">
+          <a href=" {{ route('admin.users.create') }}"><li id="webinar1">
             <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="16" height="15.999" viewBox="0 0 16 15.999">
             <defs>
               <clipPath id="clip-path">
@@ -260,7 +260,7 @@
           </svg>
           افزودن کاربر</li></a>
           <!-- users list -->
-          <a href="admin-users-list.html"><li id="webinar2">
+          <a href="{{ route('admin.users.landscape') }}"><li id="webinar2">
             <svg xmlns="http://www.w3.org/2000/svg" width="18" height="10" viewBox="0 0 18 10">
             <path id="list-sharp" d="M4,17a1,1,0,1,1,0-2,1,1,0,1,1,0,2Zm0-4a1,1,0,1,1,0-2,1,1,0,1,1,0,2ZM4,9A1,1,0,1,1,4,7,1,1,0,1,1,4,9Zm3,8V15H21v2Zm0-4V11H21v2ZM7,9V7H21V9Z" transform="translate(-3 -7)" fill="#fff"/>
           </svg>
@@ -276,4 +276,4 @@
     </div>
 
   </div>
-    
+
