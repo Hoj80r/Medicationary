@@ -15,12 +15,13 @@
 </head>
 <body class="admin-main">
 <!-- header -->
-<header class="admin-status col-9 float-start d-flex justify-content-between">
-    <div id="admin-pageName" class="mt-2 me-5">
-        <h3 class="display-5">وبینار</h3> {{--***************--}}
-    </div>
+<header class="admin-status col-9 float-start {{--d-flex justify-content-between--}}">
+    {{-- <div id="admin-pageName" class="mt-2 me-5">
+        <h3 class="display-5">وبینار</h3>
+    </div> --}}
     <!-- user info and log out btn -->
-    <div id="admin-user-status" dir="ltr" class="ms-4 mt-2">
+    <div id="admin-user-status" dir="ltr" class="ms-4 mt-3
+     float-start">
         <div class="btn-group w-auto" role="group" aria-label="Basic example">
             <!-- logout btn -->
             <button type="button" class="btn btn-outline-danger col-2 w-auto">
