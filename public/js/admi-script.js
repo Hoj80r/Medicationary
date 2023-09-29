@@ -5,8 +5,4 @@ $(document).ready(function(){
     });
   });
 
-  // upload file
-  $('.file-upload').file_upload();
-
-
-
+//   chnage the add admin page img
