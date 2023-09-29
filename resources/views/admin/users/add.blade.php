@@ -7,8 +7,8 @@
                 <div class="d-flex justify-content-between mt-5">
                     <!-- first & lastname fild -->
                     <div class="col-4">
-                        <input class="form-control m-3" type="text" placeholder="نام">
-                        <input class="form-control m-3" type="text" placeholder="نام خانوادگی">
+                        <input class="form-control m-3" type="text" placeholder="نام و نام خانوادگی">
+                        <input class="form-control m-3 text-start" type="tel" placeholder="09xxxxxxxxx">
                     </div>
                     <!-- image upload input -->
                     <div class="col-4">
