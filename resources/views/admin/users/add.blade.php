@@ -12,15 +12,15 @@
                     </div>
                     <!-- image upload input -->
                     <div class="col-4">
-                        <div class="d-flex justify-content-center mb-4">
+                        <div class="d-flex justify-content-center mb-4 " id="add-userImg">
                             <img src="https://mdbootstrap.com/img/Photos/Others/placeholder-avatar.jpg"
                                  class="rounded-circle"
-                                 id="add-userImg" alt="example placeholder" style="width: 200px;"/>
+                                 alt="example placeholder" style="width: 200px;"/>
                         </div>
                         <div class="d-flex justify-content-center">
-                            <div class="btn btn-secondary">
+                            <div class="btn btn-secondary" id="add-userImgBtn">
                                 <label class="form-label text-white m-1" for="customFile2">آپلود عکس</label>
-                                <input type="file" class="form-control d-none" id="customFile2"/>
+                                <input type="file" class="form-control d-none" id="customFile2" />
                             </div>
                         </div>
                     </div>
@@ -33,7 +33,7 @@
                 </div>
                 <!-- sub btn -->
                 <div class="text-center mt-5">
-                    <button type="button" class="btn btn-success w-25 p-3">ثبت</button>
+                    <button type="button" class="btn btn-success w-25 p-3"><a href="#" class="link-underline-dark link-light">ثبت</a></button>
                 </div>
 
             </form>
