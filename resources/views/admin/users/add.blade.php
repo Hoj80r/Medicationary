@@ -14,7 +14,8 @@
                     <div class="col-4">
                         <div class="d-flex justify-content-center mb-4">
                             <img src="https://mdbootstrap.com/img/Photos/Others/placeholder-avatar.jpg"
-                                 class="rounded-circle" alt="example placeholder" style="width: 200px;"/>
+                                 class="rounded-circle"
+                                 id="add-userImg" alt="example placeholder" style="width: 200px;"/>
                         </div>
                         <div class="d-flex justify-content-center">
                             <div class="btn btn-secondary">
