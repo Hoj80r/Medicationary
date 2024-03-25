@@ -5,7 +5,6 @@
         return new bootstrap.Popover(popoverTriggerEl)
     })
 </script>
-<script src="/public/js/script-admin.js"></script>
 
 
 </body>
