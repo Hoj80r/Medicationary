@@ -6,14 +6,16 @@
         <div id="webinar-list" class="main-list col-9 float-start pe-5 ps-5">
             <!-- table title -->
             <div class="list-page-titles d-flex justify-content-start p-3 text-center">
-                <div class="h4 col-1">#</div>
+                <div class="h4 col-1"></div>
                 <div class="h4 col-2">آیدی</div>
                 <div class="h4 col-3">نام و نام‌خوانوادگی</div>
                 <div class="h4 col-2">سمت</div>
             </div>
             <!-- table elements each row -->
-            <div class="list-page-items d-flex justify-content-start align-items-center mt-3 p-4 text-center">
-                <div class="display-4 col-1">1</div>
+            <div class="list-page-items d-flex justify-content-start align-items-center mt-3 pt-5 pb-5 pe-2  text-center">
+                <div class="display-4 col-1 p-1 ">
+                    <img src="/images/1.jpg" class="img-thumbnail rounded-circle object-fit-contain " alt="...">
+                </div>
                 <div class="display-4 col-2">12345</div>
                 <div class="display-4 col-3">حجت راستی</div>
                 <div class="display-4 col-2">مهندس</div>
