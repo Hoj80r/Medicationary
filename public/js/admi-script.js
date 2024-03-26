@@ -7,8 +7,6 @@ $(document).ready(function(){
 
     const addUserImg = document.querySelector('#add-userImg');
 
-    const addUserImgBtn = document.querySelector('#add-userImgBtn');
-
     const addUserImgIndex = document.querySelector('#customFile2');
 
     addUserImgIndex.addEventListener('change',(e) =>{
