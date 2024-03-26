@@ -1,7 +1,14 @@
-@extends('layouts.admin.master');
+@extends('layouts.admin.master')
 
-@section('content');
+@section('content')
 <div class="container-fluid position-relative">
+    {{--page title --}}
+    <nav aria-label="breadcrumb" class="ms-4 mt-3
+    float-start fs-3 fw-bold" dir="ltr">
+        <ol class="breadcrumb">
+        <li class="breadcrumb-item" aria-current="page">لیست پادکست‌ها</li>
+        </ol>
+    </nav>
     <!-- main list table -->
     <div id="webinar-list" class="main-list col-9 float-start pe-5 ps-5">
         <!-- table title -->

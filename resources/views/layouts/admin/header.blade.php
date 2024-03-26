@@ -18,7 +18,7 @@
 
 <body class="admin-main">
     <!-- header -->
-    <header class="admin-status col-9 float-start {{-- d-flex justify-content-between --}}">
+    <header class="admin-status col-7 float-start {{-- d-flex justify-content-between --}}">
         {{-- <div id="admin-pageName" class="mt-2 me-5">
         <h3 class="display-5">وبینار</h3>
     </div> --}}

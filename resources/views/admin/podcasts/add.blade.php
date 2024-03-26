@@ -2,6 +2,13 @@
 
 @section('content')
     <div class="container-fluid position-relative">
+        {{--page title --}}
+        <nav aria-label="breadcrumb" class="ms-5 ps-3 mt-3
+        float-start fs-3 fw-bold" dir="ltr">
+            <ol class="breadcrumb">
+            <li class="breadcrumb-item" aria-current="page">افزودن پادکست</li>
+            </ol>
+        </nav>
         <!-- upload form -->
         <div id="webinar-up" class="col-9 float-start pe-5 ps-5 " dir="ltr">
 
