@@ -20,6 +20,7 @@ font-face{
 
 ::-webkit-scrollbar {
     width: 0;
+    display: none;
 }
 
 /* general styles */
