@@ -27,7 +27,7 @@
                         <div class="d-flex justify-content-center">
                             <div class="btn btn-secondary" id="add-userImgBtn">
                                 <label class="form-label text-white m-1" for="customFile2">آپلود عکس</label>
-                                <input type="file" class="form-control d-none" id="customFile2" />
+                                <input type="file" class="form-control d-none" id="customFile2" accept="image/*" />
                             </div>
                         </div>
                     </div>
