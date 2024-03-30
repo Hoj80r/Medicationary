@@ -972,6 +972,7 @@
         },
         {
             "name": "laravel/framework",
+<<<<<<< HEAD
             "version": "v10.22.0",
             "source": {
                 "type": "git",
@@ -982,6 +983,18 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/laravel/framework/zipball/9234388a895206d4e1df37342b61adc67e5c5d31",
                 "reference": "9234388a895206d4e1df37342b61adc67e5c5d31",
+=======
+            "version": "v10.23.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/laravel/framework.git",
+                "reference": "dbfd495557678759153e8d71cc2f6027686ca51e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/laravel/framework/zipball/dbfd495557678759153e8d71cc2f6027686ca51e",
+                "reference": "dbfd495557678759153e8d71cc2f6027686ca51e",
+>>>>>>> d40cdc5185329492929dcf757d77d557ffe0ff27
                 "shasum": ""
             },
             "require": {
@@ -1081,7 +1094,11 @@
                 "league/flysystem-read-only": "^3.3",
                 "league/flysystem-sftp-v3": "^3.0",
                 "mockery/mockery": "^1.5.1",
+<<<<<<< HEAD
                 "orchestra/testbench-core": "^8.4",
+=======
+                "orchestra/testbench-core": "^8.10",
+>>>>>>> d40cdc5185329492929dcf757d77d557ffe0ff27
                 "pda/pheanstalk": "^4.0",
                 "phpstan/phpstan": "^1.4.7",
                 "phpunit/phpunit": "^10.0.7",
@@ -1168,6 +1185,7 @@
                 "issues": "https://github.com/laravel/framework/issues",
                 "source": "https://github.com/laravel/framework"
             },
+<<<<<<< HEAD
             "time": "2023-09-05T13:20:01+00:00"
         },
         {
@@ -1182,6 +1200,22 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/laravel/prompts/zipball/b514c5620e1b3b61221b0024dc88def26d9654f4",
                 "reference": "b514c5620e1b3b61221b0024dc88def26d9654f4",
+=======
+            "time": "2023-09-13T14:51:46+00:00"
+        },
+        {
+            "name": "laravel/prompts",
+            "version": "v0.1.7",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/laravel/prompts.git",
+                "reference": "554e7d855a22e87942753d68e23b327ad79b2070"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/laravel/prompts/zipball/554e7d855a22e87942753d68e23b327ad79b2070",
+                "reference": "554e7d855a22e87942753d68e23b327ad79b2070",
+>>>>>>> d40cdc5185329492929dcf757d77d557ffe0ff27
                 "shasum": ""
             },
             "require": {
@@ -1214,6 +1248,7 @@
             ],
             "support": {
                 "issues": "https://github.com/laravel/prompts/issues",
+<<<<<<< HEAD
                 "source": "https://github.com/laravel/prompts/tree/v0.1.6"
             },
             "time": "2023-08-18T13:32:23+00:00"
@@ -1230,6 +1265,24 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/laravel/sanctum/zipball/95a0181900019e2d79acbd3e2ee7d57e3d0a086b",
                 "reference": "95a0181900019e2d79acbd3e2ee7d57e3d0a086b",
+=======
+                "source": "https://github.com/laravel/prompts/tree/v0.1.7"
+            },
+            "time": "2023-09-12T11:09:22+00:00"
+        },
+        {
+            "name": "laravel/sanctum",
+            "version": "v3.3.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/laravel/sanctum.git",
+                "reference": "338f633e6487e76b255470d3373fbc29228aa971"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/laravel/sanctum/zipball/338f633e6487e76b255470d3373fbc29228aa971",
+                "reference": "338f633e6487e76b255470d3373fbc29228aa971",
+>>>>>>> d40cdc5185329492929dcf757d77d557ffe0ff27
                 "shasum": ""
             },
             "require": {
@@ -1282,7 +1335,11 @@
                 "issues": "https://github.com/laravel/sanctum/issues",
                 "source": "https://github.com/laravel/sanctum"
             },
+<<<<<<< HEAD
             "time": "2023-09-04T14:26:54+00:00"
+=======
+            "time": "2023-09-07T15:46:33+00:00"
+>>>>>>> d40cdc5185329492929dcf757d77d557ffe0ff27
         },
         {
             "name": "laravel/serializable-closure",
@@ -2794,6 +2851,7 @@
         },
         {
             "name": "psy/psysh",
+<<<<<<< HEAD
             "version": "v0.11.20",
             "source": {
                 "type": "git",
@@ -2804,6 +2862,18 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/bobthecow/psysh/zipball/0fa27040553d1d280a67a4393194df5228afea5b",
                 "reference": "0fa27040553d1d280a67a4393194df5228afea5b",
+=======
+            "version": "v0.11.21",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/bobthecow/psysh.git",
+                "reference": "bcb22101107f3bf770523b65630c9d547f60c540"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/bobthecow/psysh/zipball/bcb22101107f3bf770523b65630c9d547f60c540",
+                "reference": "bcb22101107f3bf770523b65630c9d547f60c540",
+>>>>>>> d40cdc5185329492929dcf757d77d557ffe0ff27
                 "shasum": ""
             },
             "require": {
@@ -2833,6 +2903,13 @@
             "extra": {
                 "branch-alias": {
                     "dev-main": "0.11.x-dev"
+<<<<<<< HEAD
+=======
+                },
+                "bamarni-bin": {
+                    "bin-links": false,
+                    "forward-command": false
+>>>>>>> d40cdc5185329492929dcf757d77d557ffe0ff27
                 }
             },
             "autoload": {
@@ -2864,9 +2941,15 @@
             ],
             "support": {
                 "issues": "https://github.com/bobthecow/psysh/issues",
+<<<<<<< HEAD
                 "source": "https://github.com/bobthecow/psysh/tree/v0.11.20"
             },
             "time": "2023-07-31T14:32:22+00:00"
+=======
+                "source": "https://github.com/bobthecow/psysh/tree/v0.11.21"
+            },
+            "time": "2023-09-17T21:15:54+00:00"
+>>>>>>> d40cdc5185329492929dcf757d77d557ffe0ff27
         },
         {
             "name": "ralouphie/getallheaders",
@@ -5873,6 +5956,7 @@
         },
         {
             "name": "laravel/sail",
+<<<<<<< HEAD
             "version": "v1.24.1",
             "source": {
                 "type": "git",
@@ -5883,6 +5967,18 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/laravel/sail/zipball/3a373bb2845623aed2017c672dc61c84ae974890",
                 "reference": "3a373bb2845623aed2017c672dc61c84ae974890",
+=======
+            "version": "v1.25.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/laravel/sail.git",
+                "reference": "e81a7bd7ac1a745ccb25572830fecf74a89bb48a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/laravel/sail/zipball/e81a7bd7ac1a745ccb25572830fecf74a89bb48a",
+                "reference": "e81a7bd7ac1a745ccb25572830fecf74a89bb48a",
+>>>>>>> d40cdc5185329492929dcf757d77d557ffe0ff27
                 "shasum": ""
             },
             "require": {
@@ -5934,7 +6030,11 @@
                 "issues": "https://github.com/laravel/sail/issues",
                 "source": "https://github.com/laravel/sail"
             },
+<<<<<<< HEAD
             "time": "2023-09-01T14:05:17+00:00"
+=======
+            "time": "2023-09-11T17:37:09+00:00"
+>>>>>>> d40cdc5185329492929dcf757d77d557ffe0ff27
         },
         {
             "name": "mockery/mockery",
@@ -6286,6 +6386,7 @@
         },
         {
             "name": "phpunit/php-code-coverage",
+<<<<<<< HEAD
             "version": "10.1.4",
             "source": {
                 "type": "git",
@@ -6296,6 +6397,18 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/sebastianbergmann/php-code-coverage/zipball/cd59bb34756a16ca8253ce9b2909039c227fff71",
                 "reference": "cd59bb34756a16ca8253ce9b2909039c227fff71",
+=======
+            "version": "10.1.5",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/sebastianbergmann/php-code-coverage.git",
+                "reference": "1df504e42a88044c27a90136910f0b3fe9e91939"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/sebastianbergmann/php-code-coverage/zipball/1df504e42a88044c27a90136910f0b3fe9e91939",
+                "reference": "1df504e42a88044c27a90136910f0b3fe9e91939",
+>>>>>>> d40cdc5185329492929dcf757d77d557ffe0ff27
                 "shasum": ""
             },
             "require": {
@@ -6352,7 +6465,11 @@
             "support": {
                 "issues": "https://github.com/sebastianbergmann/php-code-coverage/issues",
                 "security": "https://github.com/sebastianbergmann/php-code-coverage/security/policy",
+<<<<<<< HEAD
                 "source": "https://github.com/sebastianbergmann/php-code-coverage/tree/10.1.4"
+=======
+                "source": "https://github.com/sebastianbergmann/php-code-coverage/tree/10.1.5"
+>>>>>>> d40cdc5185329492929dcf757d77d557ffe0ff27
             },
             "funding": [
                 {
@@ -6360,7 +6477,11 @@
                     "type": "github"
                 }
             ],
+<<<<<<< HEAD
             "time": "2023-08-31T14:04:38+00:00"
+=======
+            "time": "2023-09-12T14:37:22+00:00"
+>>>>>>> d40cdc5185329492929dcf757d77d557ffe0ff27
         },
         {
             "name": "phpunit/php-file-iterator",
@@ -6607,6 +6728,7 @@
         },
         {
             "name": "phpunit/phpunit",
+<<<<<<< HEAD
             "version": "10.3.3",
             "source": {
                 "type": "git",
@@ -6617,6 +6739,18 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/241ed4dd0db1c096984e62d414c4e1ac8d5dbff4",
                 "reference": "241ed4dd0db1c096984e62d414c4e1ac8d5dbff4",
+=======
+            "version": "10.3.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/sebastianbergmann/phpunit.git",
+                "reference": "b8d59476f19115c9774b3b447f78131781c6c32b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/b8d59476f19115c9774b3b447f78131781c6c32b",
+                "reference": "b8d59476f19115c9774b3b447f78131781c6c32b",
+>>>>>>> d40cdc5185329492929dcf757d77d557ffe0ff27
                 "shasum": ""
             },
             "require": {
@@ -6630,7 +6764,11 @@
                 "phar-io/manifest": "^2.0.3",
                 "phar-io/version": "^3.0.2",
                 "php": ">=8.1",
+<<<<<<< HEAD
                 "phpunit/php-code-coverage": "^10.1.1",
+=======
+                "phpunit/php-code-coverage": "^10.1.5",
+>>>>>>> d40cdc5185329492929dcf757d77d557ffe0ff27
                 "phpunit/php-file-iterator": "^4.0",
                 "phpunit/php-invoker": "^4.0",
                 "phpunit/php-text-template": "^3.0",
@@ -6688,7 +6826,11 @@
             "support": {
                 "issues": "https://github.com/sebastianbergmann/phpunit/issues",
                 "security": "https://github.com/sebastianbergmann/phpunit/security/policy",
+<<<<<<< HEAD
                 "source": "https://github.com/sebastianbergmann/phpunit/tree/10.3.3"
+=======
+                "source": "https://github.com/sebastianbergmann/phpunit/tree/10.3.4"
+>>>>>>> d40cdc5185329492929dcf757d77d557ffe0ff27
             },
             "funding": [
                 {
@@ -6704,7 +6846,11 @@
                     "type": "tidelift"
                 }
             ],
+<<<<<<< HEAD
             "time": "2023-09-05T04:34:51+00:00"
+=======
+            "time": "2023-09-12T14:42:28+00:00"
+>>>>>>> d40cdc5185329492929dcf757d77d557ffe0ff27
         },
         {
             "name": "sebastian/cli-parser",
@@ -7141,6 +7287,7 @@
         },
         {
             "name": "sebastian/exporter",
+<<<<<<< HEAD
             "version": "5.0.1",
             "source": {
                 "type": "git",
@@ -7151,6 +7298,18 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/sebastianbergmann/exporter/zipball/32ff03d078fed1279c4ec9a407d08c5e9febb480",
                 "reference": "32ff03d078fed1279c4ec9a407d08c5e9febb480",
+=======
+            "version": "5.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/sebastianbergmann/exporter.git",
+                "reference": "c3fa8483f9539b190f7cd4bfc4a07631dd1df344"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/sebastianbergmann/exporter/zipball/c3fa8483f9539b190f7cd4bfc4a07631dd1df344",
+                "reference": "c3fa8483f9539b190f7cd4bfc4a07631dd1df344",
+>>>>>>> d40cdc5185329492929dcf757d77d557ffe0ff27
                 "shasum": ""
             },
             "require": {
@@ -7207,7 +7366,11 @@
             "support": {
                 "issues": "https://github.com/sebastianbergmann/exporter/issues",
                 "security": "https://github.com/sebastianbergmann/exporter/security/policy",
+<<<<<<< HEAD
                 "source": "https://github.com/sebastianbergmann/exporter/tree/5.0.1"
+=======
+                "source": "https://github.com/sebastianbergmann/exporter/tree/5.1.0"
+>>>>>>> d40cdc5185329492929dcf757d77d557ffe0ff27
             },
             "funding": [
                 {
@@ -7215,7 +7378,11 @@
                     "type": "github"
                 }
             ],
+<<<<<<< HEAD
             "time": "2023-09-08T04:46:58+00:00"
+=======
+            "time": "2023-09-18T07:15:37+00:00"
+>>>>>>> d40cdc5185329492929dcf757d77d557ffe0ff27
         },
         {
             "name": "sebastian/global-state",
@@ -8060,5 +8227,9 @@
         "php": "^8.1"
     },
     "platform-dev": [],
+<<<<<<< HEAD
     "plugin-api-version": "2.3.0"
+=======
+    "plugin-api-version": "2.6.0"
+>>>>>>> d40cdc5185329492929dcf757d77d557ffe0ff27
 }

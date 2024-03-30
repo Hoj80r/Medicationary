@@ -2,10 +2,21 @@
 
 @section('content')
     <div class="container-fluid position-relative">
+<<<<<<< HEAD
+=======
+        {{--page title --}}
+        <nav aria-label="breadcrumb" class="ms-5 ps-3 mt-3
+        float-start fs-3 fw-bold" dir="ltr">
+            <ol class="breadcrumb">
+            <li class="breadcrumb-item" aria-current="page">لیست کاربران</li>
+            </ol>
+        </nav>
+>>>>>>> d40cdc5185329492929dcf757d77d557ffe0ff27
         <!-- main list table -->
         <div id="webinar-list" class="main-list col-9 float-start pe-5 ps-5">
             <!-- table title -->
             <div class="list-page-titles d-flex justify-content-start p-3 text-center">
+<<<<<<< HEAD
                 <div class="h4 col-1">#</div>
                 <div class="h4 col-2">آیدی</div>
                 <div class="h4 col-2">عنوان</div>
@@ -17,12 +28,28 @@
                 <div class="display-4 col-2">12345</div>
                 <div class="display-4 col-2">مکنتبیمکنلستبلمکت</div>
                 <div class="display-4 col-2">1402/05/23</div>
+=======
+                <div class="h4 col-1"></div>
+                <div class="h4 col-2">آیدی</div>
+                <div class="h4 col-3">نام و نام‌خوانوادگی</div>
+                <div class="h4 col-2">سمت</div>
+            </div>
+            <!-- table elements each row -->
+            <div class="list-page-items d-flex justify-content-start align-items-center mt-3 pt-5 pb-5 pe-2  text-center">
+                <div class="display-4 col-1 p-1 ">
+                    <img src="/images/1.jpg" class="img-thumbnail rounded-circle object-fit-contain " alt="...">
+                </div>
+                <div class="display-4 col-2">12345</div>
+                <div class="display-4 col-3">حجت راستی</div>
+                <div class="display-4 col-2">مهندس</div>
+>>>>>>> d40cdc5185329492929dcf757d77d557ffe0ff27
                 <button type="button" class="btn btn-secondary col-2" data-bs-container="body" data-bs-toggle="popover"
                         data-bs-placement="bottom"
                         data-bs-content="لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد، کتابهای زیادی در شصت و سه درصد گذشته حال و آینده، شناخت فراوان جامعه و متخصصان را می طلبد، تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی، و فرهنگ پیشرو در زبان فارسی ایجاد کرد، در این صورت می توان امید داشت که تمام و دشواری موجود در ارائه راهکارها، و شرایط سخت تایپ به پایان رسد و زمان مورد نیاز شامل حروفچینی دستاوردهای اصلی، و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیرد.">
                     توضیحات
                 </button>
                 <!-- icons -->
+<<<<<<< HEAD
                 <div class="list-icons d-flex justify-content-around col-3 pe-4 ps-4">
                     <!-- accept the item to show in site -->
                     <div class="list-accept">
@@ -42,6 +69,10 @@
                                   d="M74.34 85.66a8 8 0 0 1 11.32-11.32L120 108.69V24a8 8 0 0 1 16 0v84.69l34.34-34.35a8 8 0 0 1 11.32 11.32l-48 48a8 8 0 0 1-11.32 0ZM240 136v64a16 16 0 0 1-16 16H32a16 16 0 0 1-16-16v-64a16 16 0 0 1 16-16h52.4a4 4 0 0 1 2.83 1.17L111 145a24 24 0 0 0 34 0l23.8-23.8a4 4 0 0 1 2.8-1.2H224a16 16 0 0 1 16 16Zm-40 32a12 12 0 1 0-12 12a12 12 0 0 0 12-12Z"/>
                         </svg>
                     </div>
+=======
+                <div class="list-icons d-flex justify-content-around col-2 pe-4 ps-4">
+
+>>>>>>> d40cdc5185329492929dcf757d77d557ffe0ff27
                     <!-- to edit the item -->
                     <div class="list-edit">
                         <svg xmlns="http://www.w3.org/2000/svg" width="23.75" height="25" viewBox="0 0 23.75 25">
