@@ -1,0 +1,513 @@
+
+/* fonts */
+/* sahel normal */
+font-face{
+    font-family: Sahel;
+    src: url(../fonts/Sahel.eot);
+    src: url(../fonts/Sahel.ttf) format("truetype"), url(../fonts/Sahel.woff) format("woff");
+    font-weight: normal;
+    font-display: swap;
+}
+
+/* sahel Bold */
+font-face{
+    font-family: Sahel-Bold;
+    src: url(../fonts/Sahel-Bold.eot);
+    src: url(../fonts/Sahel-Bold.ttf) format("truetype"), url(../fonts/Sahel-Bold.woff) format("woff");
+    font-weight: bold;
+    font-display: swap;
+}
+
+::-webkit-scrollbar {
+    width: 0;
+    display: none;
+}
+
+/* general styles */
+body {
+    font-family: Sahel;
+    direction: rtl;
+
+}
+
+a{
+    text-decoration: none;
+}
+
+button{
+    font-family: Sahel;
+}
+/* news */
+#news {
+    width: 100%;
+    height: 30px;
+    background-color:#04355C;
+}
+
+/* nav bar */
+#nav-bar{
+    background-image: linear-gradient(to bottom right, #4867BC, #09236D);
+    color: #fff;
+}
+/* nav elements styles */
+#nav-bar a {
+    color: #d1d1cf;
+    font-weight: bold;
+}
+
+#nav-bar a:hover{
+    color:#fff;
+    transform: scale(1.2);
+}
+
+#mynavbar li {
+    padding: 10px;
+
+}
+/* nav bar collapse icon sytles */
+#nav-bar .navbar-toggler {
+    color: #fff;
+    border: 2px solid #fff !important;
+}
+
+#nav-bar .navbar-toggler:focus {
+    color: #fff;
+    border: 2px solid #fff !important;
+    box-shadow: none !important;
+}
+
+#nav-bar .nav-icon{
+    color: #fff;
+    display: inline-block;
+    margin-top: 5px;
+}
+/* navbar search icon styles */
+#search{
+    font-size: 30px;
+    font-weight: bold;
+    margin-right: 45px;
+}
+
+#search:hover{
+    cursor: pointer;
+    transform: scale(1.2);
+}
+/* Homepage styles */
+/* ask a pharmacis section styls */
+.ask-phar{
+    margin-top: 55px;
+}
+
+.ask-phar img{
+    width: 355.6px;
+    height: 336.66px;
+}
+
+.ask-phar .h2{
+    font-weight: bold;
+    /* margin-bottom: 25px; */
+}
+
+.ask-phar .discription{
+    display: none;
+    overflow: hidden;
+    width: 650px;
+    height: 200px;
+    margin-top: 75px;
+    margin-right: 100px;
+}
+
+/* podcast section styles */
+#podcast{
+    background-image: linear-gradient(to bottom left,#0B3096,#06184B);
+    margin-top: 50px;
+}
+
+#podcasts-title p{
+    font-weight: bold;
+    color: #d1d1cf;
+}
+
+#podcasts-title p:hover{
+    color: #fff;
+}
+
+#podcast .headphone-img img{
+    width: 338px;
+    height: 296.09px;
+}
+/* podcastitemsstyles */
+#podcast-items{
+    color: #fff;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+#podcast-titel{
+    margin-top: 35px;
+}
+
+#podcast-discription{
+    width: 80%;
+    height: 50px;
+    margin: 20px 30px 20px 0;
+    overflow: hidden;
+
+}
+
+#podcast-discription p{
+    font-size: 12px;
+
+}
+
+#podcast button{
+    margin-bottom: 20px;
+}
+
+/* blog styles */
+#blog{
+    margin-top: 50px;
+    text-align: center;
+}
+
+#b-title p{
+    font-weight: bold;
+}
+
+#blog .btn{
+    color: #fff;
+    background-color:#0B3096 ;
+    height: 33px;
+    width: 215px;
+}
+
+#blog .btn a{
+    color: #fff;
+}
+
+#blog #imp-article-img{
+    margin-top: 10px;
+}
+
+#blog #blog-imp-title-article{
+    margin-top: 15px;
+}
+
+#blog-imp-discription-article{
+   padding: 10px;
+}
+
+#blog-article{
+    display: none;
+    margin-top: 10px;
+}
+
+#blog-article-discription{
+    text-align: center;
+}
+
+#blog-article-title{
+    height: 500px;
+    background-color: #F1F9FF;
+    margin-top: -10rem;
+
+}
+
+#blog-article-title h3{
+    margin-top: 12rem;
+    color: #04355C;
+}
+
+#blog-article-title p{
+    color: #04355C;
+    margin-top: 2rem;
+}
+
+#blog-article-text{
+    background-color: #F1F9FF;
+    /* border: 1px solid #06184B; */
+    border-radius: 5px;
+}
+
+#blog-article-text p{
+    font-size: 20px;
+    line-height: 40px;
+}
+
+/* ask styles */
+
+#ask-right-items{
+    border-left: solid 2px #0B3096;
+    border-bottom: solid 2px #0B3096;
+    border-radius: 30px;
+}
+
+#ask-left-items{
+    border-right: solid 2px #0B3096;
+    border-top: solid 2px #0B3096;
+    border-radius: 30px;
+}
+
+.ask{
+    border: 2px solid #06184B;
+    border-top-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+}
+
+
+/* footer */
+#footer{
+    background-color: #0B3096;
+    color: #fff;
+}
+
+#footer a {
+    text-align: center;
+    font-size: 30px;
+    color: #fff;
+}
+
+#footer a:hover{
+    transform: scale(1.2);
+}
+
+/* blog page styles */
+.article{
+
+    padding: 20px;
+}
+
+.article-cat{
+    color: darkgrey;
+    font-size: 20px;
+}
+
+.article-date{
+    color: darkgrey;
+    font-size: 20px;
+}
+
+.article-btn{
+
+    background-color: #09236D;
+    color: #fff;
+}
+
+/* webinar styles */
+#webinar{
+    margin-top: 25px ;
+    margin-bottom: 25px;
+}
+
+.webinar-card{
+    background-color: #bdbdbf;
+    width: 24rem;
+}
+
+.webinar-head{
+    background-image: url(../images/webinar-img.png);
+    height: 300px;
+}
+
+.webinar-status{
+    background-color: #09236D;
+    color: #fff;
+    border-radius: 0 5px 0 0;
+    padding: 5px;
+}
+
+.webianr-orgnizer-data{
+    margin-top: 15rem;
+}
+
+.webinar-orgnizer{
+    background-color: #09236D;
+    color: #fff;
+    height: 50px;
+    padding-right: 5px
+}
+
+.webinar .orgnizer-img{
+    width: 100px;
+    height: 100px;
+}
+
+.card-body{
+    margin-top: 5rem;
+}
+
+/* ADMIN */
+
+/* login page */
+#login-form{
+    direction: ltr;
+    width: 450px;
+    height: 400px;
+    margin-top: 15rem;
+}
+
+#login-form .card{
+    border: 1px solid #04355C;
+}
+
+#login-form #log-btn{
+    background-color: #04355C;
+    color: #fff;
+}
+
+#login-img{
+    margin-top: -6.5rem;
+}
+
+
+/* admin-sidebar */
+
+#sidebar{
+    height: 100%;
+    background-color: #04355C;
+    padding: 2rem 0 2rem 0;
+    border-radius: 50px 0 0 50px;
+}
+
+#sidebar a{
+    color: #fff;
+    font-weight: bold;
+}
+
+#sidebar #sidebar-items button{
+    height: 80px;
+    background-color: #4867BC;
+    color: #fff;
+    border-radius: 20px;!important
+}
+
+#sidebar #sidebar-items div{
+    background-color: #4867BC;
+    color: #fff;
+    margin-top: -1.25rem;
+    padding-top: 1rem;
+    border-radius: 0 0 20px 20px;
+}
+
+#sidebar #sidebar-items li{
+    list-style-type: none;
+    margin-top: 1rem;
+}
+
+#sidebar #sidebar-items p{
+    font-size: 30px;
+}
+
+/* admin-main */
+.admin-main{
+    background-color:rgb(165, 184, 185);
+}
+
+
+#all-users .card{
+    width: 30%;
+    height: 550px;
+    color: #fff;
+    margin-top: 1rem;
+}
+
+#all-users .card-online{
+    background-color: #02400abe;
+}
+
+#all-users .card-offline{
+    background-color: #40020bbe;
+}
+
+
+#all-users .card .user-img{
+    height: 268px;
+    border-radius: 10px;
+}
+
+#all-users .card .user-discription{
+    box-sizing: border-box;
+}
+
+/* admin-upload */
+
+
+.upload-container {
+    background-color: #fff;
+    border-radius: 6px;
+    padding: 10px;
+  }
+
+  .border-container {
+    border: 5px dashed #c6c6c6a6;
+    border-radius: 4px;
+    padding: 20px;
+  }
+
+  .border-container p {
+    color: #130f40;
+    font-weight: 600;
+    font-size: 1.1em;
+    letter-spacing: -1px;
+    margin-top: 30px;
+    margin-bottom: 0;
+    opacity: 0.65;
+  }
+
+  #file-browser {
+    text-decoration: none;
+    color: rgb(22,42,255);
+    border-bottom: 3px dotted rgba(22, 22, 255, 0.85);
+  }
+
+  #file-browser:hover {
+    color: rgb(0, 0, 255);
+    border-bottom: 3px dotted rgba(0, 0, 255, 0.85);
+  }
+
+
+/* admin list page */
+
+.list-page-titles{
+    border-bottom: #000 solid 3px;
+}
+
+.list-page-items{
+    border: #04355C solid 2px;
+    border-radius: 45mm;
+}
+
+.list-page-items div{
+    font-size: medium;
+}
+
+.list-page-items .list-icons div:hover{
+    cursor: pointer;
+}
+
+/* main ask page */
+.list-page-items{
+    height: 70px;
+}
+
+.list-page-items #admin-ask-title{
+    height: 40px;
+}
+
+/* ask answer page */
+.question-text{
+    border-left: solid 2px #04355C;
+    border-bottom: solid 2px #04355C;
+    border-radius: 20px;
+    margin: auto;
+}
+
+.answer-text{
+    border-top: solid 2px #04355C;
+    border-right: solid 2px #04355C;
+    border-radius: 20px;
+}
+
+/* ADMIN-USERS  */
+
+
