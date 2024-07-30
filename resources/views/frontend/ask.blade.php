@@ -32,7 +32,7 @@
      <div id="ask-right-items" class="col-12 p-3 col-lg-6">
       <!-- name input -->
       <div class="input-group mb-3">
-        <input type="text" class="form-control" placeholder="نام و نام‌خانوادگی" aria-label="Username" aria-describedby="basic-addon1" dir="rtl" required autofocus>
+        <input type="text" class="form-control" placeholder="نام و نام‌خانوادگی" aria-label="Username" aria-describedby="basic-addon1" dir="rtl"  autofocus>
         <span class="input-group-text" id="basic-addon1">
           <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50">
             <g id="Group_27" data-name="Group 27" transform="translate(-836 -270)">
