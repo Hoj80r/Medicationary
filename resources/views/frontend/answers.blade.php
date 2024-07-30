@@ -13,17 +13,19 @@
   <div class="container">
     <div class="ask text-center d-md-flex justify-content-between  m-3">
 
-        <div id="answear-img" class="col-md-4 h-auto col-12 p-3" >
-          <img src="../images/Rectangle 1093.png" alt="">
+        <div id="answear-img" class="col-md-3 h-auto col-12 " >
+          <img class="mt-4" src="../images/apple.jpg" alt="">
         </div>
 
-        <div class="ask-data col-md-8 text-md-end h-auto p-4">
-          <p class="ask-title h2 text-center">عنوان</p>
-          <div class="d-flex justify-content-around m-2">
-            <p class="ask-cat h4 d-inline">دسته یندی</p>
-            <p class="ask-cat h4 d-inline">نام پرسنده</p>
+        <div class="ask-data col-md-9 text-md-end h-auto p-4">
+            <p class="ask-title h2 text-center">عوارض مسکن چیست</p>
+          <div class="d-flex justify-content-end m-2">
+            <p class="ask-cat h4 d-inline">دسته بندی</p>
+
           </div>
-          <p class="ask-discription overflow-scroll" style="height: 140px;">Et rebum sed et lorem clita sit dolore laoreet sanctus takimata eos delenit. Delenit ipsum aliquyam aliquam amet labore nonummy sea accusam consetetur ipsum et dolore illum ipsum justo ut duis ipsum. Gubergren sit et dolores voluptua ad accusam eleifend voluptua et et hendrerit.Et rebum sed et lorem clita sit dolore laoreet sanctus takimata eos delenit. Delenit ipsum aliquyam aliquam amet labore nonummy sea accusam consetetur ipsum et dolore illum ipsum justo ut duis ipsum. Gubergren sit et dolores voluptua ad accusam eleifend voluptua et et hendrerit.Et rebum sed et lorem clita sit dolore laoreet sanctus takimata eos delenit. Delenit ipsum aliquyam aliquam amet labore nonummy sea accusam consetetur ipsum et dolore illum ipsum justo ut duis ipsum. Gubergren sit et dolores voluptua ad accusam eleifend voluptua et et hendrerit.Et rebum sed et lorem clita sit dolore laoreet sanctus takimata eos delenit. Delenit ipsum aliquyam aliquam amet labore nonummy sea accusam consetetur ipsum et dolore illum ipsum justo ut duis ipsum. Gubergren sit et dolores voluptua ad accusam eleifend voluptua et et hendrerit.Et rebum sed et lorem clita sit dolore laoreet sanctus takimata eos delenit. Delenit ipsum aliquyam aliquam amet labore nonummy sea accusam consetetur ipsum et dolore illum ipsum justo ut duis ipsum. Gubergren sit et dolores voluptua ad accusam eleifend voluptua et et hendrerit.</p>
+          <p class="ask-discription overflow-scroll" style="height: 140px;">
+            لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد، کتابهای زیادی در شصت و سه درصد گذشته حال و آینده، شناخت فراوان جامعه و متخصصان را می طلبد، تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی، و فرهنگ پیشرو در زبان فارسی ایجاد کرد، در این صورت می توان امید داشت که تمام و دشواری موجود در ارائه راهکارها، و شرایط سخت تایپ به پایان رسد و زمان مورد نیاز شامل حروفچینی دستاوردهای اصلی، و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیرد.لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد، کتابهای زیادی در شصت و سه درصد گذشته حال و آینده، شناخت فراوان جامعه و متخصصان را می طلبد، تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی، و فرهنگ پیشرو در زبان فارسی ایجاد کرد، در این صورت می توان امید داشت که تمام و دشواری موجود در ارائه راهکارها، و شرایط سخت تایپ به پایان رسد و زمان مورد نیاز شامل حروفچینی دستاوردهای اصلی، و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیرد.
+          </p>
         </div>
       </div>
   </div>
