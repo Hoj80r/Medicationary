@@ -14,10 +14,10 @@
     <!-- nav bar -->
   <nav class="navbar sticky-top navbar-expand-md" id="nav-bar">
     <div class="container">
-      
+
         <!-- nav logo -->
       <div class="col-2">
-        <a class="navbar-brand" href="homePage.html">Logo</a>
+        <a class="navbar-brand" href="{{route('home.landscape')}}">Logo</a>
       </div>
 
       <!-- nav button when it collapse to smal size -->
@@ -26,31 +26,31 @@
             <iconify-icon icon="fluent:navigation-24-filled" style="color: white;" width="28" height="24"></iconify-icon>
         </span>
       </button>
-      
+
       <!-- the elemts of navbar -->
       <div class="collapse navbar-collapse" id="mynavbar">
         <ul class="navbar-nav col-10 ">
           <li class="nav-item">
-            <a class="nav-link " href="blog.html">وبلاگ</a>
+            <a class="nav-link " href="{{route('home.blog')}}">وبلاگ</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="webinar.html">وبینار</a>
+            <a class="nav-link" href="{{route('home.webinar')}}">وبینار</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="answear.html">پاسخ ها</a>
+            <a class="nav-link" href="{{route('home.answers')}}">پاسخ ها</a>
           </li>
           <li class="nav-item ">
-            <a class="nav-link disabled" href="podcast.html">پادکست</a>
+            <a class="nav-link" href="{{route('home.podcast')}}">پادکست</a>
           </li>
-          
+
         </ul>
         <!-- search icon -->
         <form class="d-flex col-2 justify-content-start" id="search">
             <iconify-icon icon="ic:baseline-search"></iconify-icon>
         </form>
       </div>
-    
+
     </div>
   </nav>
-  
-  
+
+
