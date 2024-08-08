@@ -11,7 +11,7 @@
 
         <div class="main-list col-9 float-start pe-5 ps-5 ">
             @include('errors.message')
-            <form action=" {{ route('admin.users.store') }}">
+            <form action=" {{ route('admin.users.store') }}" method="post" enctype="multipart/form-data">
                 @csrf
                 <div class="d-flex justify-content-between mt-5">
                     <!-- first & lastname fild -->
@@ -43,6 +43,9 @@
                 <!-- role -->
                 <div class="col-md-4">
                     <div class="form-group">
+                        <textarea name="description" id="editor">لطفا متن مورد نظر خودتان را وارد کنید</textarea>
+                    </div>
+                    <div class="form-group">
                        {{-- <label>نقش کاربری</label>--}}
                         <select class="form-control" name="role">
                             <option value="user">کاربر</option>
@@ -53,7 +56,7 @@
                 </div>
                 <!-- sub btn -->
                 <div class="text-center mt-5">
-                    <button type="button" class="btn btn-success w-25 p-3"><a href="#" class="link-underline-dark link-light">ثبت</a></button>
+                    <button type="submit" class="btn btn-success w-25 p-3">ثبت</button>
                 </div>
 
             </form>

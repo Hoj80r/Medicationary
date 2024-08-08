@@ -30,7 +30,10 @@ Route::prefix('admin')->group(function(){
     Route::prefix('users')->group(function (){
         Route::get('',[UsersController::class, 'landscape'])->name('admin.users.landscape');
         Route::get('create',[UsersController::class, 'create'])->name('admin.users.create');
-        Route::get('store',[UsersController::class, 'store'])->name('admin.users.store');
+        Route::post('store',[UsersController::class, 'store'])->name('admin.users.store');
+        Route::get('{user_id}/edit',[UsersController::class, 'edit'])->name('admin.users.edit');
+        Route::put('{user_id}/update',[UsersController::class, 'update'])->name('admin.users.update');
+        Route::delete('{user_id}/delete',[UsersController::class, 'delete'])->name('admin.users.delete');
     });
         Route::prefix('login')->group(function (){
             Route::get('',[LoginController::class, 'landscape'])->name('admin.login.landscape');

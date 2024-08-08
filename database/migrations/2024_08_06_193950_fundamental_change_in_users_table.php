@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::table('users', function (Blueprint $table) {
             $table->dropColumn(['lastName']);
-            $table->string('profile_url')->after('password');
+            $table->string('profile_url')->nullable()->after('password');
         });
     }
 
