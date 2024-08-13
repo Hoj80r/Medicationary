@@ -28,7 +28,7 @@ class StoreRequest extends FormRequest
             'password' => 'required|min:8|max:24|unique:users,password',
             'role' => 'required|in:admin,user',
             'profile_url' => 'required|image|mimes:png,jpg,jpeg',
-            'description' => 'min:10'
+            'description' => 'required|min:10'
         ];
     }
 }

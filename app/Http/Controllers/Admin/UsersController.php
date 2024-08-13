@@ -36,29 +36,12 @@ class UsersController extends Controller
             'profile_url' => $validatedData['profile_url'],
             'description' => $validatedData['description']
         ]);
-        if (!$createdUser){
-            return back()->with('failed', 'کابر ایجاد نشد');
+        if (!$this->uploadImage($createdUser, $validatedData) or !$createdUser){
+            return back()->with('failed', 'خطا در ایجاد کاربر');
         }
 
-        try {
+        return back()->with('success', 'کاربر با موفقیت ایجاد شد');
 
-            $path = 'profiles/' . $createdUser->id . '/' . $validatedData['profile_url']->getClientOriginalName();
-
-            ImageUploader::Upload($validatedData['profile_url'],$path,'public_storage');
-
-            $updatedProduct = $createdUser->Update([
-                'profile_url' => $path
-            ]);
-
-            if(!$updatedProduct){
-                throw new \Exception('تصاوریر آپلود نشدند');
-            }
-
-            return back()->with('success', 'کاربر ایجاد شد');
-
-        }catch (\Exception $e){
-            return back()->with('failed', $e->getMessage());
-        }
     }
 
     public function edit($user_id){
@@ -70,23 +53,21 @@ class UsersController extends Controller
     public function update(UpdateRequest $request, $user_id){
         $validatedData = $request->validated();
 
-        $user = User::findOrFalil($user_id);
+        $user = User::findOrFail($user_id);
 
         $updatedUser = $user->update([
             'name' => $validatedData['name'],
             'email' => $validatedData['email'],
             'mobile' => $validatedData['mobile'],
-            'password' => $validatedData['password'],
             'role' => $validatedData['role'],
-            'profile_url' => $validatedData['profile_url'],
             'description' => $validatedData['description']
         ]);
 
-        if (!$updatedUser){
-            return back()->with('failed', 'کاربر بروزرسانی نشد!');
+        if (!$this->uploadImage($user, $validatedData) or !$updatedUser){
+            return back()->with('failed', 'خطا در بروزرسانی اطلاعات');
         }
 
-        return back()->with('success', 'کاربر بروزرسانی شد');
+        return back()->with('success', 'اطلاعات به روزرسانی شدند');
 
     }
 
@@ -96,6 +77,32 @@ class UsersController extends Controller
         $user->delete();
 
         return back()->with('success', 'کاربر حذف شد');
+    }
+
+    private function uploadImage($createdUser, $validatedData){
+
+        try {
+            $data = [];
+
+            if (isset($validatedData['profile_url'])){
+                $path = 'profiles/' . $createdUser->id . '/' . $validatedData['profile_url']->getClientOriginalName();
+
+                ImageUploader::Upload($validatedData['profile_url'],$path,'public_storage');
+
+                $data += ['profile_url' => $path] ;
+            }
+
+            $updatedUser = $createdUser->Update($data);
+
+            if(!$updatedUser){
+                throw new \Exception('تصویر آپلود نشد');
+            }
+
+            return true;
+
+        }catch (\Exception $e){
+            return false;
+        }
     }
 
 }

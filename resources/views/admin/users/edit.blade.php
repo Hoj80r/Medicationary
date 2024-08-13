@@ -37,7 +37,6 @@
                     </div>
                     <!-- e-mail & phone-number fild -->
                     <div class="col-4">
-                        <input class="form-control m-3" type="password" name="password" dir="ltr" placeholder="password" value="{{$user->password}}">
                         <input type="email" name="email" class="form-control m-3" dir="ltr" id="exampleFormControlInput1"
                                placeholder="name@example.com" value="{{$user->email}}">
                     </div>
@@ -45,7 +44,7 @@
                 <!-- role -->
                 <div class="col-md-4">
                     <div class="form-group">
-                        <textarea name="description" id="editor">لطفا متن مورد نظر خودتان را وارد کنید</textarea>
+                        <textarea name="description" id="editor">{{$user->description}}</textarea>
                     </div>
                     <div class="form-group">
                         {{-- <label>نقش کاربری</label>--}}
