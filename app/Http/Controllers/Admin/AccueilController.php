@@ -1,16 +1,17 @@
 <?php
 
-namespace App\Http\Controllers\Home;
+namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Models\User;
-use Couchbase\CollectionManager;
 use Illuminate\Http\Request;
 
 class AccueilController extends Controller
 {
     public function landscape(){
 
-        return view('frontend.homePage');
+        $users = User::all();
+
+        return view('admin.index', compact('users'));
     }
 }

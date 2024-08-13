@@ -1,4 +1,3 @@
-<!-- hhhhhhhhh -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,7 +16,7 @@
 
         <!-- nav logo -->
       <div class="col-2">
-        <a class="navbar-brand" href="{{route('home.landscape')}}">Logo</a>
+        <a class="navbar-brand" href="{{route('home.landscape')}}"> <em>Medicationary</em></a>
       </div>
 
       <!-- nav button when it collapse to smal size -->

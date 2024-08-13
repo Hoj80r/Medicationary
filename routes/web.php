@@ -6,7 +6,7 @@ use App\Http\Controllers\Admin\LoginController;
 use App\Http\Controllers\Admin\PodcastsController;
 use App\Http\Controllers\Admin\UsersController;
 use App\Http\Controllers\Admin\WebinarsController;
-use App\Http\Controllers\Home\AccueilController;
+use App\Http\Controllers\Admin\AccueilController;
 use App\Http\Controllers\Home\WeblogController;
 use Illuminate\Support\Facades\Route;
 
@@ -24,12 +24,14 @@ use Illuminate\Support\Facades\Route;
 
 
 Route::prefix('admin')->group(function(){
-    Route::get('', function (){
-        return view('admin.index');
-    })->name('admin.index');
+    Route::get('',[AccueilController::class, 'landscape'])->name('admin.index.landscape');
     Route::prefix('users')->group(function (){
         Route::get('',[UsersController::class, 'landscape'])->name('admin.users.landscape');
         Route::get('create',[UsersController::class, 'create'])->name('admin.users.create');
+        Route::post('store',[UsersController::class, 'store'])->name('admin.users.store');
+        Route::get('{user_id}/edit',[UsersController::class, 'edit'])->name('admin.users.edit');
+        Route::put('{user_id}/update',[UsersController::class, 'update'])->name('admin.users.update');
+        Route::delete('{user_id}/delete',[UsersController::class, 'delete'])->name('admin.users.delete');
     });
         Route::prefix('login')->group(function (){
             Route::get('',[LoginController::class, 'landscape'])->name('admin.login.landscape');
