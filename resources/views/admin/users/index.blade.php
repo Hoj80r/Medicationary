@@ -25,8 +25,8 @@
             <div id="user-table-content" class="d-flex flex-wrap">
                 @foreach ($users as $user)
                 <div class="list-page-items d-flex justify-content-start align-items-center mt-3 pt-5 pb-5 pe-2  text-center col-12">
-                    <div class="display-4 col-1 p-1 ">
-                        <img src="/{{$user->profile_url}}" class="img-thumbnail rounded-circle object-fit-contain " alt="...">
+                    <div class=" col-1 p-1 h-auto ">
+                        <img src="/{{$user->profile_url}}" class="w-50 h-50 rounded-circle object-fit-contain" alt="...">
                     </div>
                     <div class="display-4 col-2">{{$user->id}}</div>
                     <div class="display-4 col-3">{{$user->name}}</div>

@@ -20,7 +20,7 @@
                         <input class="form-control m-3 text-start" type="tel" name="mobile" placeholder="09xxxxxxxxx">
                     </div>
                     <!-- image upload input -->
-                    <div class="col-4">
+                    <div class="col-4 rounded-circle">
                         <div class="d-flex justify-content-center mb-4 " id="add-userImg">
                             <img src="https://mdbootstrap.com/img/Photos/Others/placeholder-avatar.jpg"
                                  class="rounded-circle"
