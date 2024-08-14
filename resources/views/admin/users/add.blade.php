@@ -41,16 +41,16 @@
                     </div>
                 </div>
                 <!-- role -->
-                <div class="col-md-4">
-                    <div class="form-group">
-                        <textarea name="description" id="editor">لطفا متن مورد نظر خودتان را وارد کنید</textarea>
+                <div class="mt-5 d-flex flex-column text-center ">
+                    <div class="form-group ">
+                        <textarea name="description" id="editor" cols="50" rows="5" placeholder="لطفا متن مورد نظر خودتان را وارد کنید"></textarea>
                     </div>
                     <div class="form-group">
                        {{-- <label>نقش کاربری</label>--}}
-                        <select class="form-control" name="role">
-                            <option value="user">کاربر</option>
+                        <select class="form-control mt-4 d-inline w-25 text-center " name="role">
+                            <option value="user" >کاربر</option>
                             {{--   <option value="2">طراح و فروشنده</option>--}}
-                            <option value="admin">ادمین</option>
+                            <option value="admin" >ادمین</option>
                         </select>
                     </div>
                 </div>
