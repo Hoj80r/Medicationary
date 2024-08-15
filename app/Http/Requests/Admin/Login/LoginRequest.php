@@ -25,7 +25,7 @@ class LoginRequest extends FormRequest
 //            'name' => 'required',
 //            'lastName' => 'required',
             'email_X' => 'required|max:32',
-//            'mobile' => 'required',
+//            'mobile' => 'digits:11',
             'password_X' => 'required|min:11|max:64'
         ];
     }

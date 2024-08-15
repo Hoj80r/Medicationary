@@ -6,6 +6,8 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\Admin\Login\LoginRequest;
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Hash;
 
 class LoginController extends Controller
 {
@@ -18,7 +20,19 @@ class LoginController extends Controller
 
         $validatedData = $request->validated();
 
-        $checkingAdmin= User::find();
+        if (\auth()->attempt(['email' => $validatedData['email_X'], 'password' => $validatedData['password_X']])){
+
+            return redirect('/admin');
+        }
+        return redirect()->back()->with('failed', 'اطلاعات وارد شده اشتباه میباشد');
+
+    }
+
+    public function logout(){
+
+        \auth()->logout();
+
+        return redirect('/admin/login');
 
     }
 }

@@ -14,3 +14,4 @@ class AccueilController extends Controller
         return view('frontend.homePage');
     }
 }
+
