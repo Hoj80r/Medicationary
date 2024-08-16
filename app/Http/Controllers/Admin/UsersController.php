@@ -15,14 +15,18 @@ class UsersController extends Controller
 {
     public function landscape(){
 
+        $currentUser = auth()->user();
+
         $users = User::paginate(10);
 
-        return view('admin.users.index', compact('users'));
+        return view('admin.users.index', compact('users', 'currentUser'));
     }
 
     public function create(){
 
-        return view('admin.users.add');
+        $currentUser = auth()->user();
+
+        return view('admin.users.add', compact('currentUser'));
     }
     public function store(StoreRequest $request){
         $validatedData = $request->validated();
@@ -45,9 +49,12 @@ class UsersController extends Controller
     }
 
     public function edit($user_id){
+
+        $currentUser = auth()->user();
+
         $user = User::findOrFail($user_id);
 
-        return view('admin.users.edit', compact('user'));
+        return view('admin.users.edit', compact('user', 'currentUser'));
     }
 
     public function update(UpdateRequest $request, $user_id){

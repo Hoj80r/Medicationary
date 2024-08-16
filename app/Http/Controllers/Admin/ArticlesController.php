@@ -9,11 +9,15 @@ class ArticlesController extends Controller
 {
     public function landscape(){
 
-        return view('admin.articles.index');
+        $currentUser = auth()->user();
+
+        return view('admin.articles.index', compact('currentUser'));
     }
 
     public function create(){
 
-        return view('admin.articles.add');
+        $currentUser = auth()->user();
+
+        return view('admin.articles.add', compact('currentUser'));
     }
 }

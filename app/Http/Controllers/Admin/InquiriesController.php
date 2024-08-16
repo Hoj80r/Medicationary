@@ -9,16 +9,22 @@ class InquiriesController extends Controller
 {
     public function landscape(){
 
-        return view('admin.inquiries.index');
+        $currentUser = auth()->user();
+
+        return view('admin.inquiries.index', compact('currentUser'));
     }
 
     public function addInquiry(){
 
-        return view('admin.inquiries.add');
+        $currentUser = auth()->user();
+
+        return view('admin.inquiries.add', compact('currentUser'));
     }
 
     public function answer(){
 
-        return view('admin.inquiries.answer');
+        $currentUser = auth()->user();
+
+        return view('admin.inquiries.answer', compact('currentUser'));
     }
 }

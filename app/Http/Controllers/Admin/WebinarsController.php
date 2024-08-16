@@ -9,11 +9,15 @@ class WebinarsController extends Controller
 {
     public function landscape(){
 
-        return view('admin.webinars.index');
+        $currentUser = auth()->user();
+
+        return view('admin.webinars.index',compact('currentUser'));
     }
 
     public function create(){
 
-        return view('admin.webinars.add');
+        $currentUser = auth()->user();
+
+        return view('admin.webinars.add', compact('currentUser'));
     }
 }

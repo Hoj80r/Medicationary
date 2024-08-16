@@ -9,11 +9,15 @@ class PodcastsController extends Controller
 {
     public function landscape(){
 
-        return view('admin.podcasts.index');
+        $currentUser = auth()->user();
+
+        return view('admin.podcasts.index', compact('currentUser'));
     }
 
     public function create(){
 
-        return view('admin.podcasts.add');
+        $currentUser = auth()->user();
+
+        return view('admin.podcasts.add', compact('currentUser'));
     }
 }
