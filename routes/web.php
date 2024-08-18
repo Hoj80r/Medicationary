@@ -6,7 +6,8 @@ use App\Http\Controllers\Admin\LoginController;
 use App\Http\Controllers\Admin\PodcastsController;
 use App\Http\Controllers\Admin\UsersController;
 use App\Http\Controllers\Admin\WebinarsController;
-use App\Http\Controllers\Admin\AccueilController;
+use App\Http\Controllers\Admin\IndexController;
+use App\Http\Controllers\Home\AccueilController;
 use App\Http\Controllers\Home\WeblogController;
 use Illuminate\Support\Facades\Route;
 
@@ -22,10 +23,10 @@ use Illuminate\Support\Facades\Route;
 */
 
 
-
 Route::prefix('admin')->group(function(){
-    Route::get('',[AccueilController::class, 'landscape'])->name('admin.index.landscape');
-    Route::prefix('users')->group(function (){
+    Route::get('',[IndexController::class, 'landscape'])->name('admin.index.landscape')->middleware('auth');
+
+    Route::prefix('users')->middleware('auth')->group(function (){
         Route::get('',[UsersController::class, 'landscape'])->name('admin.users.landscape');
         Route::get('create',[UsersController::class, 'create'])->name('admin.users.create');
         Route::post('store',[UsersController::class, 'store'])->name('admin.users.store');
@@ -34,23 +35,24 @@ Route::prefix('admin')->group(function(){
         Route::delete('{user_id}/delete',[UsersController::class, 'delete'])->name('admin.users.delete');
     });
         Route::prefix('login')->group(function (){
-            Route::get('',[LoginController::class, 'landscape'])->name('admin.login.landscape');
-            Route::post('',[LoginController::class, 'check'])->name('admin.login.check');
+            Route::get('',[LoginController::class, 'landscape'])->name('login');
+            Route::get('/logout',[LoginController::class, 'logout'])->name('admin.logout');
+            Route::post('/login',[LoginController::class, 'check'])->name('admin.login.check');
     });
-        Route::prefix('webinars')->group(function (){
+        Route::prefix('webinars')->middleware('auth')->group(function (){
             Route::get('',[WebinarsController::class, 'landscape'])->name('admin.webinars.landscape');
             Route::get('create',[WebinarsController::class, 'create'])->name('admin.webinars.create');
         });
-        Route::prefix('podcasts')->group(function (){
+        Route::prefix('podcasts')->middleware('auth')->group(function (){
             Route::get('',[PodcastsController::class, 'landscape'])->name('admin.podcasts.landscape');
             Route::get('create', [PodcastsController::class, 'create'])->name('admin.podcasts.create');
         });
-        Route::prefix('inquiries')->group(function (){
+        Route::prefix('inquiries')->middleware('auth')->group(function (){
             Route::get('',[InquiriesController::class, 'landscape'])->name('admin.inquiries.landscape');
             Route::get('add',[InquiriesController::class, 'addInquiry'])->name('admin.inquiries.addInquiry');
             Route::get('answer',[InquiriesController::class, 'answer'])->name('admin.inquiries.answer');
         });
-        Route::prefix('articles')->group(function (){
+        Route::prefix('articles')->middleware('auth')->group(function (){
             Route::get('',[ArticlesController::class, 'landscape'])->name('admin.articles.landscape');
             Route::get('create',[ArticlesController::class, 'create'])->name('admin.articles.create');
         });
