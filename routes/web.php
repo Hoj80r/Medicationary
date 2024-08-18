@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Admin\ArticlesController;
+use App\Http\Controllers\Admin\Blog\PostController;
 use App\Http\Controllers\Admin\InquiriesController;
 use App\Http\Controllers\Admin\LoginController;
 use App\Http\Controllers\Admin\PodcastsController;
@@ -52,9 +53,14 @@ Route::prefix('admin')->group(function(){
             Route::get('add',[InquiriesController::class, 'addInquiry'])->name('admin.inquiries.addInquiry');
             Route::get('answer',[InquiriesController::class, 'answer'])->name('admin.inquiries.answer');
         });
-        Route::prefix('articles')->middleware('auth')->group(function (){
-            Route::get('',[ArticlesController::class, 'landscape'])->name('admin.articles.landscape');
-            Route::get('create',[ArticlesController::class, 'create'])->name('admin.articles.create');
+        Route::prefix('post')->middleware('auth')->group(function (){
+            Route::get('',[PostController::class, 'index'])->name('admin.post.index');
+            Route::get('create',[PostController::class, 'create'])->name('admin.post.create');
+            Route::post('store',[PostController::class, 'store'])->name('admin.post.store');
+            Route::get('{post_id}/edit',[PostController::class, 'edit'])->name('admin.post.edit');
+            Route::put('{post_id}/update',[PostController::class, 'update'])->name('admin.post.update');
+            Route::delete('{post_id}/delete',[PostController::class, 'delete'])->name('admin.post.delete');
+//            Route::get('create',[CommentController::class, 'create'])->name('admin.articles.create');
         });
 
 });

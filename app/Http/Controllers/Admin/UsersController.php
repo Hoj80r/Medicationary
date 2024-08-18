@@ -37,7 +37,6 @@ class UsersController extends Controller
             'mobile' => $validatedData['mobile'],
             'password' => $validatedData['password'],
             'role' => $validatedData['role'],
-            'profile_url' => $validatedData['profile_url'],
             'description' => $validatedData['description']
         ]);
         if (!$this->uploadImage($createdUser, $validatedData) or !$createdUser){

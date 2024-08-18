@@ -88,7 +88,7 @@
       <div id="blog-item" class="collap-data collapse text-center col-10">
         <ul id="side-item">
           <!-- blog upload -->
-          <a href="{{ route('admin.articles.create') }}"><li id="webinar1">
+          <a href="{{ route('admin.post.create') }}"><li id="webinar1">
             <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="16" height="15.999" viewBox="0 0 16 15.999">
             <defs>
               <clipPath id="clip-path">
@@ -101,7 +101,7 @@
           </svg>
           افزودن مقاله</li></a>
           <!-- blog list -->
-          <a href="{{ route('admin.articles.landscape') }}"><li id="webinar2">
+          <a href="{{ route('admin.post.index') }}"><li id="webinar2">
             <svg xmlns="http://www.w3.org/2000/svg" width="18" height="10" viewBox="0 0 18 10">
             <path id="list-sharp" d="M4,17a1,1,0,1,1,0-2,1,1,0,1,1,0,2Zm0-4a1,1,0,1,1,0-2,1,1,0,1,1,0,2ZM4,9A1,1,0,1,1,4,7,1,1,0,1,1,4,9Zm3,8V15H21v2Zm0-4V11H21v2ZM7,9V7H21V9Z" transform="translate(-3 -7)" fill="#fff"/>
           </svg>
