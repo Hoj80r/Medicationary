@@ -50,8 +50,13 @@ Route::prefix('admin')->group(function(){
         });
         Route::prefix('inquiries')->middleware('auth')->group(function (){
             Route::get('',[InquiriesController::class, 'landscape'])->name('admin.inquiries.landscape');
-            Route::get('add',[InquiriesController::class, 'addInquiry'])->name('admin.inquiries.addInquiry');
-            Route::get('answer',[InquiriesController::class, 'answer'])->name('admin.inquiries.answer');
+            Route::get('input',[InquiriesController::class, 'input'])->name('admin.inquiries.input');
+            Route::post('add',[InquiriesController::class, 'addInquiries'])->name('admin.inquiries.addInquiries');
+            Route::get('{question_id}/answer',[InquiriesController::class, 'answer'])->name('admin.inquiries.answer');
+            Route::post('{question_id}/insert',[InquiriesController::class, 'insert'])->name('admin.inquiries.insert');
+            Route::get('{answer_id}/edit',[InquiriesController::class, 'edit'])->name('admin.inquiries.edit');
+            Route::put('{answer_id}/update',[InquiriesController::class, 'update'])->name('admin.inquiries.update');
+            Route::delete('{answer_id}/delete',[InquiriesController::class, 'delete'])->name('admin.inquiries.delete');
         });
         Route::prefix('post')->middleware('auth')->group(function (){
             Route::get('',[PostController::class, 'index'])->name('admin.post.index');

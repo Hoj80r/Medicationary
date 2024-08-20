@@ -140,7 +140,7 @@
       <div id="ask-item" class="collap-data collapse text-center col-10">
         <ul id="side-item">
           <!-- ask upload -->
-          <a href="{{ route('admin.inquiries.addInquiry') }}"><li id="webinar1">
+          <a href="{{ route('admin.inquiries.input') }}"><li id="webinar1">
             <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="16" height="15.999" viewBox="0 0 16 15.999">
             <defs>
               <clipPath id="clip-path">
@@ -151,13 +151,13 @@
               <path id="Union_1" data-name="Union 1" d="M-4613,16V9h-7V7h7V0h2V7h7V9h-7v7Z" transform="translate(4620)" fill="#fff"/>
             </g>
           </svg>
-          افزودن پرسش</li></a>
+          لیست پرسش های دریافتی</li></a>
           <!-- ask list -->
           <a href="{{ route('admin.inquiries.landscape') }}"><li id="webinar2">
             <svg xmlns="http://www.w3.org/2000/svg" width="18" height="10" viewBox="0 0 18 10">
             <path id="list-sharp" d="M4,17a1,1,0,1,1,0-2,1,1,0,1,1,0,2Zm0-4a1,1,0,1,1,0-2,1,1,0,1,1,0,2ZM4,9A1,1,0,1,1,4,7,1,1,0,1,1,4,9Zm3,8V15H21v2Zm0-4V11H21v2ZM7,9V7H21V9Z" transform="translate(-3 -7)" fill="#fff"/>
           </svg>
-          لیست پرسش‌ها</li></a>
+          لیست پاسخ پرسش‌ها</li></a>
           <!-- ask category -->
           <a href="#"><li id="webinar3">
             <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28.015" viewBox="0 0 28 28.015">
