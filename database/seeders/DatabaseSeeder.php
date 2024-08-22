@@ -6,6 +6,7 @@ namespace Database\Seeders;
 use App\Models\Comment;
 use App\Models\Post;
 use Illuminate\Database\Seeder;
+use function Laravel\Prompts\password;
 
 class DatabaseSeeder extends Seeder
 {
@@ -15,6 +16,7 @@ class DatabaseSeeder extends Seeder
     public function run(): void
     {
 
+<<<<<<< HEAD
          $user = \App\Models\User::factory()->create([
              'name' => 'Test User',
              'email' => 'test@example.com',
@@ -22,5 +24,14 @@ class DatabaseSeeder extends Seeder
 
 //         Post::factory(30)->has(Comment::factory(15))->for($user)->create();
          Post::factory(30)->create();
+=======
+         \App\Models\User::factory()->create([
+             'name' => 'Hojat Rasti',
+             'email' => 'hojat@rasti.com',
+             'mobile' => '09021885547',
+             'role' => 'admin',
+             'password' => '123456789123456'
+     ]);
+>>>>>>> frontend
     }
 }
