@@ -11,11 +11,12 @@
         </nav>
         <!-- upload form -->
         <div id="webinar-up" class="col-9 float-start pe-5 ps-5 " dir="ltr">
-
+            @include('errors.message')
             <form action="" class="d-flex justify-content-center flex-wrap mt-5">
+                @csrf
                 <div class="input-group mb-3 w-100">
                     <!-- category input -->
-                    <input type="text" class="form-control text-center" placeholder="دسته بندی" required>
+                    <input type="text" class="form-control text-center" name="category" placeholder="دسته بندی" required>
                     <!-- middle pic -->
                     <span class="input-group-text">
                         <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 64 64">

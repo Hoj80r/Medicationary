@@ -11,6 +11,11 @@ class WeblogController extends Controller
 
     return view('frontend.webinar');
 }
+    public function webinarPlayer(){
+
+        return view('frontend.webinarPlayer');
+    }
+
     public function blog(){
 
         return view('frontend.blog');
