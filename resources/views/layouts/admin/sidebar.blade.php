@@ -2,7 +2,7 @@
    <div id="sidebar" class="col-3 float-end position-fixed d-flex flex-column justify-content-center overflow-y-scroll">
     <!-- sidebar title -->
     <div id="aide-header" class="text-center">
-      <h2><a href="{{ route('admin.index') }}" title="برگشت به صفحه اصلی سایت">Medicationary</a></h2>
+      <h2><a href="{{ route('admin.index.landscape') }}" title="برگشت به صفحه اصلی سایت">Medicationary</a></h2>
     </div>
     <!-- menu items -->
     <div id="sidebar-items" class="d-flex flex-wrap justify-content-around">

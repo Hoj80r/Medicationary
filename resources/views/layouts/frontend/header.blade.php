@@ -1,4 +1,3 @@
-<!-- hhhhhhhhh -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,6 +8,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <link rel="stylesheet" href="/css/style.css">
     <script src="https://cdn.jsdelivr.net/npm/iconify-icon@1.0.7/dist/iconify-icon.min.js"></script>
+    <script type="module" src="../js/podcasts.js"></script>
 </head>
 <body>
     <!-- nav bar -->
@@ -17,7 +17,7 @@
 
         <!-- nav logo -->
       <div class="col-2">
-        <a class="navbar-brand" href="{{route('home.landscape')}}">Logo</a>
+        <a class="navbar-brand" href="{{route('home.landscape')}}"> <em>Medicationary</em></a>
       </div>
 
       <!-- nav button when it collapse to smal size -->

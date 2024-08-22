@@ -10,15 +10,17 @@
         </nav>
 
         <div class="main-list col-9 float-start pe-5 ps-5 ">
-            <form action="">
+            @include('errors.message')
+            <form action=" {{ route('admin.users.store') }}" method="post" enctype="multipart/form-data">
+                @csrf
                 <div class="d-flex justify-content-between mt-5">
                     <!-- first & lastname fild -->
                     <div class="col-4">
-                        <input class="form-control m-3" type="text" placeholder="نام و نام خانوادگی">
-                        <input class="form-control m-3 text-start" type="tel" placeholder="09xxxxxxxxx">
+                        <input class="form-control m-3" type="text" name="name" placeholder="نام و نام خانوادگی">
+                        <input class="form-control m-3 text-start" type="tel" name="mobile" placeholder="09xxxxxxxxx">
                     </div>
                     <!-- image upload input -->
-                    <div class="col-4">
+                    <div class="col-4 rounded-circle">
                         <div class="d-flex justify-content-center mb-4 " id="add-userImg">
                             <img src="https://mdbootstrap.com/img/Photos/Others/placeholder-avatar.jpg"
                                  class="rounded-circle"
@@ -27,20 +29,34 @@
                         <div class="d-flex justify-content-center">
                             <div class="btn btn-secondary" id="add-userImgBtn">
                                 <label class="form-label text-white m-1" for="customFile2">آپلود عکس</label>
-                                <input type="file" class="form-control d-none" id="customFile2" accept="image/*" />
+                                <input type="file" name="profile_url" class="form-control d-none" id="customFile2" accept="image/*" />
                             </div>
                         </div>
                     </div>
                     <!-- e-mail & phone-number fild -->
                     <div class="col-4">
-                        <input class="form-control m-3" type="password" name="phone" dir="ltr" placeholder="password">
-                        <input type="email" class="form-control m-3" dir="ltr" id="exampleFormControlInput1"
+                        <input class="form-control m-3" type="password" name="password" dir="ltr" placeholder="password">
+                        <input type="email" name="email" class="form-control m-3" dir="ltr" id="exampleFormControlInput1"
                                placeholder="name@example.com">
+                    </div>
+                </div>
+                <!-- role -->
+                <div class="mt-5 d-flex flex-column text-center ">
+                    <div class="form-group ">
+                        <textarea name="description" id="editor" cols="50" rows="5" placeholder="لطفا متن مورد نظر خودتان را وارد کنید"></textarea>
+                    </div>
+                    <div class="form-group">
+                       {{-- <label>نقش کاربری</label>--}}
+                        <select class="form-control mt-4 d-inline w-25 text-center " name="role">
+                            <option value="user" >کاربر</option>
+                            {{--   <option value="2">طراح و فروشنده</option>--}}
+                            <option value="admin" >ادمین</option>
+                        </select>
                     </div>
                 </div>
                 <!-- sub btn -->
                 <div class="text-center mt-5">
-                    <button type="button" class="btn btn-success w-25 p-3"><a href="#" class="link-underline-dark link-light">ثبت</a></button>
+                    <button type="submit" class="btn btn-success w-25 p-3">ثبت</button>
                 </div>
 
             </form>
