@@ -3,7 +3,7 @@
 @section('content')
     <div class="container-fluid position-relative">
         <!-- user lists -->
-        <div id="all-users" class="col-9 float-start d-flex justify-content-around flex-wrap mt-5">
+        <div id="all-users" class="col-11 col-lg-9 float-start d-flex justify-content-around flex-wrap mt-lg-3">
             @foreach($users as $user)
             <div class="card card-online">
                 <img src="/{{$user->profile_url}}" class="card-img-top user-img p-1" alt="...">
