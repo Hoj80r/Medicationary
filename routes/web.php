@@ -43,6 +43,10 @@ Route::prefix('admin')->group(function(){
         Route::prefix('webinars')->middleware('auth')->group(function (){
             Route::get('',[WebinarsController::class, 'landscape'])->name('admin.webinars.landscape');
             Route::get('create',[WebinarsController::class, 'create'])->name('admin.webinars.create');
+            Route::post('store',[WebinarsController::class, 'store'])->name('admin.webinars.store');
+            Route::get('{webinar_id}/edit',[WebinarsController::class, 'edit'])->name('admin.webinars.edit');
+            Route::put('{webinar_id}/update',[WebinarsController::class, 'update'])->name('admin.webinars.update');
+            Route::delete('{webinar_id}/delete',[WebinarsController::class, 'delete'])->name('admin.webinars.delete');
         });
         Route::prefix('podcasts')->middleware('auth')->group(function (){
             Route::get('',[PodcastsController::class, 'landscape'])->name('admin.podcasts.landscape');

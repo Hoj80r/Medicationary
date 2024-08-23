@@ -12,11 +12,12 @@
         </nav>
         <!-- upload form -->
         <div id="webinar-up" class="col-9 float-start pe-5 ps-5 " dir="ltr">
-
-            <form action="" class="d-flex justify-content-center flex-wrap mt-5">
+            @include('errors.message')
+            <form action="{{route('admin.webinars.store')}}" method="post" class="d-flex justify-content-center flex-wrap mt-5" enctype="multipart/form-data">
+                @csrf
                 <div class="input-group mb-3 w-100">
                     <!-- category input -->
-                    <input type="text" class="form-control text-center" placeholder="دسته بندی" required>
+                    <input type="text" class="form-control text-center" name="category" placeholder="دسته بندی" required>
                     <!-- middle pic -->
                     <span class="input-group-text">
                         <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 64 64">
@@ -31,16 +32,16 @@
                         </svg>
                     </span>
                     <!-- title input -->
-                    <input type="text" class="form-control text-center" placeholder="عنوان" required>
+                    <input type="text" class="form-control text-center" name="title" placeholder="عنوان" required>
                 </div>
                 <!-- discription input -->
                 <div class="col-8">
-                    <textarea class="form-control" required rows="5" dir="rtl" placeholder="توضیحات"></textarea>
+                    <textarea class="form-control" required rows="5" dir="rtl" name="description" placeholder="توضیحات"></textarea>
                 </div>
                 <!-- file upload area -->
-                <input class="form-control m-3" type="file" id="formFileMultiple" multiple>
+                <input class="form-control m-3" type="file" name="webinar_url" id="formFileMultiple" multiple>
                 <label for="file">Thumbnail Input</label>
-                <input class="form-control m-3" type="file" id="formFileMultiple" accept="image/*">
+                <input class="form-control m-3" type="file" id="formFileMultiple" name="thumbnail_url" accept="image/*">
                 <!-- submit btn -->
                 <div class="col-auto">
                     <button type="submit" class="btn btn-primary mb-3 ps-5 pe-5 pt-2 pb-2 ">ثبت</button>

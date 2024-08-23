@@ -6,7 +6,7 @@
         <nav aria-label="breadcrumb" class="ms-5 ps-3 mt-3
         float-start fs-3 fw-bold" dir="ltr">
             <ol class="breadcrumb">
-                <li class="breadcrumb-item" aria-current="page">افزودن پادکست</li>
+                <li class="breadcrumb-item" aria-current="page">ویرایش پادکست</li>
             </ol>
         </nav>
         <!-- upload form -->
