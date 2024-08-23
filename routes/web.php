@@ -47,6 +47,10 @@ Route::prefix('admin')->group(function(){
         Route::prefix('podcasts')->middleware('auth')->group(function (){
             Route::get('',[PodcastsController::class, 'landscape'])->name('admin.podcasts.landscape');
             Route::get('create', [PodcastsController::class, 'create'])->name('admin.podcasts.create');
+            Route::post('store', [PodcastsController::class, 'store'])->name('admin.podcasts.store');
+            Route::get('{podcast_id}/edit', [PodcastsController::class, 'edit'])->name('admin.podcasts.edit');
+            Route::put('{podcast_id}/update', [PodcastsController::class, 'update'])->name('admin.podcasts.update');
+            Route::delete('{podcast_id}/delete', [PodcastsController::class, 'delete'])->name('admin.podcasts.delete');
         });
         Route::prefix('inquiries')->middleware('auth')->group(function (){
             Route::get('',[InquiriesController::class, 'landscape'])->name('admin.inquiries.landscape');
@@ -72,7 +76,7 @@ Route::prefix('admin')->group(function(){
 
 Route::prefix('')->group(function (){
     Route::get('',[AccueilController::class, 'landscape'])->name('home.landscape');
-    Route::get('webinar',[WeblogController::class, 'landscape'])->name('home.webinar');
+    Route::get('webinar',[WeblogController::class, 'webinar'])->name('home.webinar');
     Route::get('webinarPlayer',[WeblogController::class, 'webinarPlayer'])->name('home.webinarPlayer');
     Route::get('ask',[WeblogController::class, 'ask'])->name('home.ask');
     Route::get('answers',[WeblogController::class, 'answers'])->name('home.answers');

@@ -16,15 +16,14 @@ class DatabaseSeeder extends Seeder
     public function run(): void
     {
 
-<<<<<<< HEAD
-         $user = \App\Models\User::factory()->create([
-             'name' => 'Test User',
-             'email' => 'test@example.com',
-         ]);
+//         $user = \App\Models\User::factory()->create([
+//             'name' => 'Test User',
+//             'email' => 'test@example.com',
+//         ]);
 
 //         Post::factory(30)->has(Comment::factory(15))->for($user)->create();
-         Post::factory(30)->create();
-=======
+//         Post::factory(30)->create();
+
          \App\Models\User::factory()->create([
              'name' => 'Hojat Rasti',
              'email' => 'hojat@rasti.com',
@@ -32,6 +31,6 @@ class DatabaseSeeder extends Seeder
              'role' => 'admin',
              'password' => '123456789123456'
      ]);
->>>>>>> frontend
+
     }
 }
