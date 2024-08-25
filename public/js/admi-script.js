@@ -1,14 +1,14 @@
-// sidebar collapsing
+
 $(document).ready(function(){
+
+    // sidebar collapsing
     $('#user-btn,#pod-btn,#ask-btn,#blog-btn,#web-btn').click(function(){
       $('.collap-data').removeClass('show')
     });
+
     //   chnage the add admin page img
-
     const addUserImg = document.querySelector('#add-userImg');
-
     const addUserImgIndex = document.querySelector('#customFile2');
-
     addUserImgIndex.addEventListener('change',(e) =>{
       var userNewImg = addUserImgIndex.files[0];
 
@@ -37,6 +37,24 @@ $(document).ready(function(){
             }
 
     } );
+
+
   });
 
+// sidebar responsive
+const sideBarBtn = document.getElementById('sidebarBtn');
+const sideBar = document.getElementById('sidebarElements');
+const sidbarCloseBtn = document.getElementById('sidebarCloseBtn')
 
+let openCloseSidebar = () =>{
+    sideBar.classList.toggle('d-none');
+    sideBarBtn.classList.toggle('d-none');
+}
+
+sideBarBtn.addEventListener('click' ,() =>{
+    openCloseSidebar()
+} )
+
+sidbarCloseBtn.addEventListener('click' ,() =>{
+    openCloseSidebar()
+} )
