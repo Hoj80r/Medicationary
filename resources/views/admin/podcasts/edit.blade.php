@@ -39,6 +39,7 @@
                     <textarea class="form-control" required rows="5" dir="rtl" name="description" placeholder="توضیحات">{{$podcast->description}}</textarea>
                 </div>
                 <!-- file upload area -->
+                Current Audio File: {{$podcast->podcast_url}}
                 <input class="form-control m-3" type="file" name="podcast_url" id="formFileMultiple" multiple>
                 <label for="file">Thumbnail Input</label>
                 <img src="/{{ $podcast->thumbnail_url }}" alt="" height="100px" width="100px">

@@ -80,12 +80,11 @@ Route::prefix('admin')->group(function(){
 
 Route::prefix('')->group(function (){
     Route::get('',[AccueilController::class, 'landscape'])->name('home.landscape');
-    Route::get('webinar',[WeblogController::class, 'webinar'])->name('home.webinar');
-    Route::get('webinarPlayer',[WeblogController::class, 'webinarPlayer'])->name('home.webinarPlayer');
+    Route::get('webinars',[WeblogController::class, 'webinars'])->name('home.webinar');
+    Route::get('webinar/{webinar_id}/webinarPlayer',[WeblogController::class, 'webinarPlayer'])->name('home.webinarPlayer');
     Route::get('ask',[WeblogController::class, 'ask'])->name('home.ask');
-    Route::get('answers',[WeblogController::class, 'answers'])->name('home.answers');
+    Route::get('responses',[WeblogController::class, 'responses'])->name('home.responses');
     Route::get('podcast',[WeblogController::class, 'podcast'])->name('home.podcast');
     Route::get('blog',[WeblogController::class, 'blog'])->name('home.blog');
-    Route::get('article1',[WeblogController::class, 'article1'])->name('home.article1');
-    Route::get('article1',[WeblogController::class, 'article1'])->name('home.article1');
+    Route::get('blog/post{post_id}',[WeblogController::class, 'post'])->name('home.post');
 });

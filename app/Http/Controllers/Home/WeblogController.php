@@ -3,34 +3,50 @@
 namespace App\Http\Controllers\Home;
 
 use App\Http\Controllers\Controller;
+use App\Models\Answer;
+use App\Models\Podcast;
+use App\Models\Post;
+use App\Models\Webinar;
 use Illuminate\Http\Request;
 
 class WeblogController extends Controller
 {
-    public function webinar(){
+    public function webinars(){
 
-    return view('frontend.webinar');
+        $webinars = Webinar::paginate(6);
+
+    return view('frontend.webinar', compact('webinars'));
 }
-    public function webinarPlayer(){
+    public function webinarPlayer($webinar_id){
 
-        return view('frontend.webinarPlayer');
+        $webinar = Webinar::findOrFail($webinar_id);
+
+        return view('frontend.webinarPlayer', compact('webinar'));
     }
 
     public function blog(){
 
-        return view('frontend.blog');
+        $posts = Post::paginate(9);
+
+        return view('frontend.blog', compact('posts'));
     }
     public function podcast(){
 
-        return view('frontend.podcast');
-    }
-    public function answers(){
+        $podcasts = Podcast::paginate(9);
 
-        return view('frontend.answers');
+        return view('frontend.podcast', compact('podcasts'));
     }
-    public function article1(){
+    public function responses(){
 
-        return view('frontend.article1');
+        $responses = Answer::paginate(9);
+
+        return view('frontend.answers', compact('responses'));
+    }
+    public function post($post_id){
+
+        $post = Post::findOrFail($post_id);
+
+        return view('frontend.post', compact('post'));
     }
     public function ask(){
 

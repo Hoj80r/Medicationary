@@ -101,7 +101,7 @@ class WebinarsController extends Controller
             if (isset($validatedData['webinar_url'])) {
                 $path = 'webinar/' . $createdWebinar->id . '/' . $validatedData['webinar_url']->getClientOriginalName();
 
-                ImageUploader::Upload($validatedData['webinar_url'], $path, 'local_storage');
+                ImageUploader::Upload($validatedData['webinar_url'], $path, 'public_storage');
 
                 $data += ['webinar_url' => $path];
 

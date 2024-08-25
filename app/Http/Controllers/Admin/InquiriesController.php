@@ -36,9 +36,9 @@ class InquiriesController extends Controller
         ]);
 
         if (!$createQuestion){
-            return back()->with('failed','درخواست با موفقیت ثبت شد');
+            return back()->with('failed','خطا در ثبت درخواست');
         }
-        return back()->with('success', 'خطا در ثبت درخواست');
+        return back()->with('success', 'درخواست با موفقیت ثبت شد');
 
     }
 

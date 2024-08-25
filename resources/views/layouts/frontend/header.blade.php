@@ -37,7 +37,7 @@
             <a class="nav-link" href="{{route('home.webinar')}}">وبینار</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="{{route('home.answers')}}">پاسخ ها</a>
+            <a class="nav-link" href="{{route('home.responses')}}">پاسخ ها</a>
           </li>
           <li class="nav-item ">
             <a class="nav-link" href="{{route('home.podcast')}}">پادکست</a>

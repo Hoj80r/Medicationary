@@ -12,24 +12,24 @@
 
   {{-- podcast content --}}
   <div class="container">
-
+      @foreach($podcasts as $podcast)
     <div id="podcast-player" class=" p-3 mb-5 mt-5 bg-body-tertiary rounded-3 w-auto h-25 d-md-flex flex-wrap justify-content-between">
 
-        <img src="../images/PodcastTumbnail.jpg" alt="podcast-tumbnail" class="h-auto p-1 col-12 col-md-4 rounded-4 d-inline object-fit-fill">
+        <img src="/{{$podcast->thumbnail_url}}" alt="podcast-tumbnail" class="h-auto p-1 col-12 col-md-4 rounded-4 d-inline object-fit-fill">
 
         <div id="podcast-content" class=" col-12 col-md-7 d-flex flex-column justify-content-between">
 
             <div id="opdcast-info" class="col-12 d-flex flex-column ">
 
-                <span id="podcast-name" class="fs-2 fw-semibold">غوغای ستارگان</span>
+                <span id="podcast-name" class="fs-2 fw-semibold">{{$podcast->title}}</span>
 
-                <span id="podcast-creator-name" class="fs-5 fw-light text-body-secondary">شکیلا</span>
+                <span id="podcast-creator-name" class="fs-5 fw-light text-body-secondary">{{$podcast->category}}</span>
 
             </div>
 
             <div id="podcast-items" class="col-12">
 
-                <audio  src="../podcast-audio/03 Ghoghaye Setaregan.mp3"  class="podcastAudio col-12 col-md-8"></audio>
+                <audio  src="/{{$podcast->podcast_url}}"  class="podcastAudio col-12 col-md-8"></audio>
 
                 <div id="podcast-controls" class="d-flex flex-wrap justify-content-center">
 
@@ -58,6 +58,7 @@
             </div>
         </div>
     </div>
+      @endforeach
 
   </div>
 @endsection

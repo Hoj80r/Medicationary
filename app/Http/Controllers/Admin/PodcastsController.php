@@ -99,7 +99,7 @@ class PodcastsController extends Controller
             if (isset($validatedData['podcast_url'])) {
                 $path = 'podcasts/' . $createdPodcast->id . '/' . $validatedData['podcast_url']->getClientOriginalName();
 
-                ImageUploader::Upload($validatedData['podcast_url'], $path, 'local_storage');
+                ImageUploader::Upload($validatedData['podcast_url'], $path, 'public_storage');
 
                 $data += ['podcast_url' => $path];
 
