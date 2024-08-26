@@ -2,16 +2,16 @@
 
 @section('content')
     <div class="container-fluid position-relative" >
-        {{--page title --}}
-        <nav aria-label="breadcrumb" class="ms-5 ps-3 mt-3
-    float-start fs-3 fw-bold" dir="ltr">
-            <ol class="breadcrumb">
-                <li class="breadcrumb-item" aria-current="page">ویرایش مقاله</li>
-            </ol>
-        </nav>
+
 
         <!-- upload form -->
-        <div id="webinar-up" class="col-9 float-start pe-5 ps-5 " dir="ltr">
+        <div id="webinar-up" class="col-12 col-lg-9 float-start pe-5 ps-5 " dir="ltr">
+            {{--page title --}}
+            <nav aria-label="breadcrumb" class="d-flex flex-row-reverse mt-3 fs-3 fw-bold" dir="ltr">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item" aria-current="page">ویرایش مقاله</li>
+                    </ol>
+            </nav>
             @include('errors.message')
             <form action="{{ route('admin.post.update', $post->id) }}" method="post" class="d-flex justify-content-center flex-wrap mt-5" enctype="multipart/form-data">
                 @csrf

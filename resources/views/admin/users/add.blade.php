@@ -2,25 +2,24 @@
 
 @section('content')
     <div class="container-fluid position-relative">{{--page title --}}
-        <nav aria-label="breadcrumb" class="ms-5 ps-3 mt-3
-        float-start fs-3 fw-bold" dir="ltr">
-            <ol class="breadcrumb">
-            <li class="breadcrumb-item" aria-current="page">افزودن کاربر</li>
-            </ol>
-        </nav>
 
-        <div class="main-list col-9 float-start pe-5 ps-5 ">
+        <div class="main-list col-12 col-lg-9 float-start pe-5 ps-5 ">
+            <nav aria-label="breadcrumb" class="d-flex flex-row-reverse mt-3 fs-3 fw-bold" dir="ltr">
+                <ol class="breadcrumb">
+                <li class="breadcrumb-item" aria-current="page">افزودن کاربر</li>
+                </ol>
+            </nav>
             @include('errors.message')
             <form action=" {{ route('admin.users.store') }}" method="post" enctype="multipart/form-data">
                 @csrf
-                <div class="d-flex justify-content-between mt-5">
+                <div class="d-flex flex-wrap justify-content-between mt-5">
                     <!-- first & lastname fild -->
-                    <div class="col-4">
+                    <div class="col-md-3 col-12">
                         <input class="form-control m-3" type="text" name="name" placeholder="نام و نام خانوادگی">
                         <input class="form-control m-3 text-start" type="tel" name="mobile" placeholder="09xxxxxxxxx">
                     </div>
                     <!-- image upload input -->
-                    <div class="col-4 rounded-circle">
+                    <div class="col-md-3 col-12 rounded-circle">
                         <div class="d-flex justify-content-center mb-4 " id="add-userImg">
                             <img src="https://mdbootstrap.com/img/Photos/Others/placeholder-avatar.jpg"
                                  class="rounded-circle"
@@ -34,7 +33,7 @@
                         </div>
                     </div>
                     <!-- e-mail & phone-number fild -->
-                    <div class="col-4">
+                    <div class="col-md-3 col-12">
                         <input class="form-control m-3" type="password" name="password" dir="ltr" placeholder="password">
                         <input type="email" name="email" class="form-control m-3" dir="ltr" id="exampleFormControlInput1"
                                placeholder="name@example.com">
