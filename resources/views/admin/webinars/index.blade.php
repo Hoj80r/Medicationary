@@ -26,7 +26,7 @@
                 <div class="display-4 col-1">{{$webinar->id}}</div>
                 <div class="display-4 col-2">{{$currentUser->id}}</div>
                 <div class="display-4 col-2">{{$webinar->title}}</div>
-                <div class="display-4 col-2">{{$webinar->created_at}}</div>
+                <div class="display-4 col-2">{{$webinar->created_at->jdate('j F Y')}}</div>
                 <button type="button" class="btn btn-secondary col-2" data-bs-container="body" data-bs-toggle="popover"
                         data-bs-placement="bottom"
                         data-bs-content="{{substr($webinar->description,0,15)}}">

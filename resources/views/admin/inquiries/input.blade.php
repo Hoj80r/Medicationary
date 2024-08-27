@@ -22,7 +22,7 @@
         @foreach($questions as $question)
         <div class="list-page-items d-flex justify-content-start align-items-center mt-3 p-4 text-center">
             <div class="display-4 col-1">{{$question->id}}</div>
-            <div class="display-4 col-2">{{$question->created_at}}</div>
+            <div class="display-4 col-2">{{$question->created_at->jdate('j F Y')}}</div>
             <div id="admin-ask-title" class="display-4 col-8 overflow-hidden">
                 {{$question->title}}
             </div>

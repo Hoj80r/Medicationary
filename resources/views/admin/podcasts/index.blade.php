@@ -27,7 +27,7 @@
             <div class="display-4 col-1">{{$podcast->id}}</div>
             <div class="display-4 col-2">{{$currentUser->id}}</div>
             <div class="display-4 col-2">{{$podcast->title}}</div>
-            <div class="display-4 col-2">{{$podcast->created_at}}</div>
+            <div class="display-4 col-2">{{$podcast->created_at->jdate('j F Y')}}</div>
             <button type="button" class="btn btn-secondary col-2" data-bs-container="body" data-bs-toggle="popover"
                     data-bs-placement="bottom"
                     data-bs-content="{{substr($podcast->description,0,15)}}">
