@@ -3,15 +3,15 @@
 @section('content')
 
 <div class="container-fluid position-relative">
-    {{--page title --}}
-    <nav aria-label="breadcrumb" class="ms-5 ps-3 mt-3
-    float-start fs-3 fw-bold" dir="ltr">
-        <ol class="breadcrumb">
-        <li class="breadcrumb-item" aria-current="page">لیست پرسش های دریافتی</li>
-        </ol>
-    </nav>
 
-    <div class="main-list col-9 float-start pe-5 ps-5">
+    <div class="main-list col-12 col-lg-9 float-start pe-5 ps-5">
+        {{--page title --}}
+        <nav aria-label="breadcrumb" class="d-flex flex-row-reverse mt-3 fs-3 fw-bold" dir="ltr">
+            <ol class="breadcrumb">
+            <li class="breadcrumb-item" aria-current="page">لیست پرسش های دریافتی</li>
+            </ol>
+        </nav>
+
 
         <div class="list-page-titles d-flex justify-content-start p-3 text-center">
             <div class="h4 col-1">#</div>

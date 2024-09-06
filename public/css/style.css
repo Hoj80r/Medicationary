@@ -362,26 +362,26 @@ button{
 
 /* admin-sidebar */
 
-#sidebar{
+.sidebar{
     height: 100%;
     background-color: #04355C;
     padding: 2rem 0 2rem 0;
     border-radius: 50px 0 0 50px;
 }
 
-#sidebar a{
+.sidebar a{
     color: #fff;
     font-weight: bold;
 }
 
-#sidebar #sidebar-items button{
+.sidebar #sidebar-items button{
     height: 80px;
     background-color: #4867BC;
     color: #fff;
     border-radius: 20px;!important
 }
 
-#sidebar #sidebar-items div{
+.sidebar #sidebar-items div{
     background-color: #4867BC;
     color: #fff;
     margin-top: -1.25rem;
@@ -389,12 +389,12 @@ button{
     border-radius: 0 0 20px 20px;
 }
 
-#sidebar #sidebar-items li{
+.sidebar #sidebar-items li{
     list-style-type: none;
     margin-top: 1rem;
 }
 
-#sidebar #sidebar-items p{
+.sidebar #sidebar-items p{
     font-size: 30px;
 }
 
@@ -405,7 +405,7 @@ button{
 
 
 #all-users .card{
-    width: 30%;
+
     height: 550px;
     color: #fff;
     margin-top: 1rem;

@@ -1,11 +1,11 @@
 @extends('layouts.admin.master')
 
 @section('content')
-    <div class="container-fluid position-relative">
+    <div class="container-fluid ">
         <!-- user lists -->
-        <div id="all-users" class="col-9 float-start d-flex justify-content-around flex-wrap mt-5">
+        <div id="all-users" class="col-12 col-lg-9 float-start d-flex justify-content-around grid gap-3 flex-wrap mt-lg-3">
             @foreach($users as $user)
-            <div class="card card-online">
+            <div class="card card-online col-12 col-lg-4 col-md-6">
                 <img src="/{{$user->profile_url}}" class="card-img-top user-img p-1" alt="...">
                 <div class="card-body mt-1">
                     <div class="d-flex align-items-center justify-content-between mt-1">
