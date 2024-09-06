@@ -2,7 +2,7 @@
 
 @section('content')
 <div class="container-fluid position-relative">
-    
+
     <!-- main list table -->
     <div id="webinar-list" class="main-list col-12 col-lg-9 float-start pe-5 ps-5">
         {{--page title --}}
@@ -25,7 +25,7 @@
         @foreach($podcasts as $podcast)
         <div class="list-page-items d-flex justify-content-start align-items-center mt-3 p-4 text-center">
             <div class="display-4 col-1">{{$podcast->id}}</div>
-            <div class="display-4 col-2">{{$currentUser->id}}</div>
+            <div class="display-4 col-2">{{$podcast->user_id}}</div>
             <div class="display-4 col-2">{{$podcast->title}}</div>
             <div class="display-4 col-2">{{$podcast->created_at->jdate('j F Y')}}</div>
             <button type="button" class="btn btn-secondary col-2" data-bs-container="body" data-bs-toggle="popover"

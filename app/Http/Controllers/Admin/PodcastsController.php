@@ -33,10 +33,13 @@ class PodcastsController extends Controller
     {
         $validatedData = $request->validated();
 
+        $currentUser = auth()->user();
+
         $createdPodcast = Podcast::create([
             'title' => $validatedData['title'],
             'category' => $validatedData['category'],
             'description' => $validatedData['description'],
+            'user_id' => $currentUser['id']
         ]);
 
         if (!$this->uploadImage($createdPodcast, $validatedData) or !$createdPodcast) {
@@ -59,12 +62,15 @@ class PodcastsController extends Controller
     public function update(UpdateRequest $request, $podcast_id){
         $validatedData = $request->validated();
 
+        $currentUser = auth()->user();
+
         $podcast = Podcast::findOrFail($podcast_id);
 
         $updatedPodcast = $podcast->update([
             'title' => $validatedData['title'],
             'category' => $validatedData['category'],
             'description' => $validatedData['description'],
+            'user_id' => $currentUser['id']
         ]);
         if (!$this->uploadImage($podcast, $validatedData) or !$updatedPodcast) {
             return back()->with('failed', 'خطا در به روزرسانی پادکست');

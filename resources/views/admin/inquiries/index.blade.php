@@ -24,7 +24,7 @@
             @foreach($inquiries as $inquiry)
             <div class="list-page-items d-flex justify-content-start align-items-center mt-3 p-4 text-center">
                 <div class="display-4 col-1">{{$inquiry->id}}</div>
-                <div class="display-4 col-2">{{$currentUser->id}}</div>
+                <div class="display-4 col-2">{{$inquiry->user_id}}</div>
                 <div class="display-4 col-2">{{$inquiry->title}}</div>
                 <div class="display-4 col-2">{{$inquiry->created_at->jdate('j F Y')}}</div>
                 <button type="button" class="btn btn-secondary col-2" data-bs-container="body" data-bs-toggle="popover"

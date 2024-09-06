@@ -27,7 +27,7 @@
             @foreach($webinars as $webinar)
             <div class="list-page-items d-flex justify-content-start align-items-center mt-3 p-4 text-center">
                 <div class="display-4 col-1">{{$webinar->id}}</div>
-                <div class="display-4 col-2">{{$currentUser->id}}</div>
+                <div class="display-4 col-2">{{$webinar->user_id}}</div>
                 <div class="display-4 col-2">{{$webinar->title}}</div>
                 <div class="display-4 col-2">{{$webinar->created_at->jdate('j F Y')}}</div>
                 <button type="button" class="btn btn-secondary col-2" data-bs-container="body" data-bs-toggle="popover"

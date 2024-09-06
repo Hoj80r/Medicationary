@@ -5,6 +5,7 @@
         <!-- user lists -->
         <div id="all-users" class="col-12 col-lg-9 float-start d-flex justify-content-around grid gap-3 flex-wrap mt-lg-3">
             @foreach($users as $user)
+                @if($user->role !== 'user')
             <div class="card card-online col-12 col-lg-4 col-md-6">
                 <img src="/{{$user->profile_url}}" class="card-img-top user-img p-1" alt="...">
                 <div class="card-body mt-1">
@@ -19,6 +20,7 @@
                     </p>
                 </div>
             </div>
+                @endif
             @endforeach
         </div>
     </div>
