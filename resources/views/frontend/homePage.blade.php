@@ -84,11 +84,11 @@
     <br>
     <br>
 
-    <div id="blog-items" class="d-xl-flex justify-content-end" >
+    <div id="blog-items" class="d-xl-flex justify-content-between" >
 
-      <div id="blog-imp-article" class="col-xl-7 float-xl-end" >
+      <div id="blog-imp-article" class="col-xl-7 mb-3 p-0  float-xl-end " >
         <a href="">
-          <img src="/images/تصویر.png" alt="" id="imp-article-img" class="img-fluid">
+          <img src="../images/1920x1080-the-last-of-us-poster_1535966498.jpg" alt="" id="imp-article-img" class="img-fluid object-fit-fill border rounded">
         </a>
 
         <a href="">
@@ -102,11 +102,35 @@
         </div>
       </div>
 
-      <div class="flex-column">
+      <div class="flex-column col-xl-4">
+        <div id="blog-article" class="float-start d-xl-inline-block border-bottom border-secondary border-3" >
+
+            <a href="">
+              <img src="../images/2.jpg" alt="" id="article-img" class="col-4 float-end">
+            </a>
+            <div class="col-8 float-start" id="blog-article-discription" >
+              <a href=""><p class="h5">عنوان مقاله</p></a>
+
+              <p style="width: 280px; height: 125px; overflow: hidden; margin-right: 35px;">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است </p>
+            </div>
+        </div>
+
+        <div id="blog-article" class="float-start d-xl-inline-block border-bottom border-secondary border-3" >
+
+            <a href="">
+              <img src="../images/2.jpg" alt="" id="article-img" class="col-4 float-end">
+            </a>
+            <div class="col-8 float-start" id="blog-article-discription" >
+              <a href=""><p class="h5">عنوان مقاله</p></a>
+
+              <p style="width: 280px; height: 125px; overflow: hidden; margin-right: 35px;">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است </p>
+            </div>
+        </div>
+
         <div id="blog-article" class="float-start d-xl-inline-block" >
 
             <a href="">
-              <img src="/images/Rectangle 1093.png" alt="" id="article-img" class="col-4 float-end">
+              <img src="../images/2.jpg" alt="" id="article-img" class="col-4 float-end">
             </a>
             <div class="col-8 float-start" id="blog-article-discription" >
               <a href=""><p class="h5">عنوان مقاله</p></a>
