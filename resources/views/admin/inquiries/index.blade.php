@@ -33,7 +33,7 @@
                     توضیحات
                 </button>
                 <!-- icons -->
-                <div class="list-icons d-flex justify-content-around col-3 pe-4 ps-4">
+                <div class="list-icons d-flex justify-content-around align-items-center col-3 pe-4 ps-4">
                     <!-- accept the item to show in site -->
                     <div class="list-accept">
                         <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 48 48">
@@ -68,11 +68,11 @@
                         <form action="{{route('admin.inquiries.delete', $inquiry->id)}}" method="Post">
                             @csrf
                             @method('delete')
-                        <button type="submit">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24">
-                            <path fill="#04355c"
-                                  d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"/>
-                        </svg>
+                        <button class="btn" type="submit">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24">
+                                <path fill="#04355c"
+                                    d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"/>
+                            </svg>
                         </button>
                         </form>
                     </div>
