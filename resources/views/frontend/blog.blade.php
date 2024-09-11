@@ -23,6 +23,8 @@
 
         <p class="article-title h2">{{$post->title}}</p>
 
+        <p class="article-cat h3">نام نویسنده</p>
+
         <p class="article-date">{{$post->created_at}}</p>
 
         <p class="article-discription">{{$post->body}}</p>
