@@ -16,14 +16,14 @@
         <div class="list-page-titles d-flex justify-content-start p-3 text-center">
             <div class="h4 col-1">#</div>
             <div class="h4 col-2">تاریخ ایجاد</div>
-            <div class="h4 col-8 text-end">عنوان پرسش</div>
+            <div class="h4 col-8 text-center">عنوان پرسش</div>
         </div>
 
         @foreach($questions as $question)
         <div class="list-page-items d-flex justify-content-start align-items-center mt-3 p-4 text-center">
             <div class="display-4 col-1">{{$question->id}}</div>
             <div class="display-4 col-2">{{$question->created_at}}</div>
-            <div id="admin-ask-title" class="display-4 col-8 overflow-hidden">
+            <div class="display-4 col-8 overflow-hidden p-0">
                 {{$question->title}}
             </div>
             <div class="list-icons d-flex justify-content-around col-1 pe-4 ps-4" title="جواب دادن به پرسش">
