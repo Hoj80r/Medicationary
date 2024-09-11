@@ -14,9 +14,9 @@
   @foreach($posts as $post)
   <div class="article container text-center d-md-flex justify-content-end">
 
-      <a href="#" id="article-img" class="col-md-4 align-middle">
-        <img src="/{{$post->thumbnail_url}}" alt="">
-      </a>
+
+        <img class="col-md-4 ms-3 img-thumbnail rounded object-fit-fill " src="/{{$post->thumbnail_url}}" alt="">
+
 
       <div class="article-data col-md-8 text-md-end">
         <p class="article-cat h3">{{$post->category}}</p>
