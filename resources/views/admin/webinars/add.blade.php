@@ -37,6 +37,13 @@
                     <!-- title input -->
                     <input type="text" class="form-control text-center" name="title" placeholder="عنوان" required>
                 </div>
+                <div class="col-xl-5 col-12 mb-3 text-center">
+                    {{-- author input --}}
+                    <input type="text" class="form-control text-center mb-3 col-12" placeholder="نام برگذارکننده" name="authorName" required>
+                    {{-- webinar hoolder pic --}}
+                    <label for="thumbnail_url">تصویر برگذارکننده</label>
+                    <input class="form-control mt-2 col-12" type="file" id="formFileMultiple" name="thumbnail_url" accept="image/*">
+                </div>
                 <!-- discription input -->
                 <div class="col-8">
                     <textarea class="form-control" required rows="5" dir="rtl" name="description" placeholder="توضیحات"></textarea>
