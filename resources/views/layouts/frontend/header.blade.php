@@ -44,10 +44,7 @@
           </li>
 
         </ul>
-        <!-- search icon -->
-        <form class="d-flex col-2 justify-content-start" id="search">
-            <iconify-icon icon="ic:baseline-search"></iconify-icon>
-        </form>
+        
       </div>
 
     </div>
