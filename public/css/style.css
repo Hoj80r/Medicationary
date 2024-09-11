@@ -490,10 +490,6 @@ button{
     height: 70px;
 }
 
-.list-page-items #admin-ask-title{
-    height: 40px;
-}
-
 /* ask answer page */
 .question-text{
     border-left: solid 2px #04355C;
