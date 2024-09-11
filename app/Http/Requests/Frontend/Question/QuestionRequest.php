@@ -24,8 +24,8 @@ class QuestionRequest extends FormRequest
         return [
             'name' => 'required|string|min:5|max:25',
             'question_title' => 'required|min:5|max:80',
-            'email' => 'required|email|min:3|max:200',
-            'mobile' => 'required|digits:11',
+            'email' => 'nullable|email|min:3|max:200',
+            'mobile' => 'nullable|digits:11',
             'explanation' => 'required|min:10'
         ];
     }

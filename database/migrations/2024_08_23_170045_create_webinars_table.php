@@ -13,6 +13,7 @@ return new class extends Migration
     {
         Schema::create('webinars', function (Blueprint $table) {
             $table->id();
+            $table->foreignIdFor(\App\Models\User::class)->constrained()->restrictOnDelete();
             $table->char('title',255);
             $table->char('category');
             $table->char('description');

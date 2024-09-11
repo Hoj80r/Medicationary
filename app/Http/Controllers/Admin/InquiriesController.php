@@ -64,11 +64,14 @@ class InquiriesController extends Controller
 
         $validatedData = $request->validated();
 
+        $currentUser = auth()->user();
+
         $createdAnswer = Answer::create([
             'question_id' => $question_id,
             'title' => $validatedData['title'],
             'category' => $validatedData['category'],
             'description' => $validatedData['description'],
+            'user_id' => $currentUser['id']
         ]);
 
         if (!$this->uploadImage($createdAnswer, $validatedData) or !$createdAnswer){
@@ -95,12 +98,15 @@ class InquiriesController extends Controller
     public function update(UpdateRequest $request, $answer_id){
         $validatedData = $request->validated();
 
+        $currentUser = auth()->user();
+
         $answer = Answer::findOrFail($answer_id);
 
         $updatedAnswer = $answer->update([
             'title' => $validatedData['title'],
             'category' => $validatedData['category'],
             'description' => $validatedData['description'],
+            'user_id' => $currentUser['id']
         ]);
 
         if (!$this->uploadImage($answer, $validatedData) or !$updatedAnswer){
