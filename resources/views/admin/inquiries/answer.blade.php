@@ -42,14 +42,14 @@
                     <textarea class="form-control" required rows="5" dir="rtl" placeholder="جواب پرسش" name="body"></textarea>
                 </div>
                 <!-- file upload area -->
+                <div class="col-10 mt-3 text-center">
+                    <label for="thumbnail_url">افزودن مقاله مربوط به پرسش</label>
+                    <input class="form-control m-3" type="file" id="formFileMultiple" name="thumbnail_url" multiple title="افزودن تامبنیل">
 
-                <input class="form-control m-3" type="file" id="formFileMultiple" name="thumbnail_url" multiple>
-
-    {{--            <label for="file">Thumbnail Input</label>--}}
-    {{--            <input class="form-control m-3" type="file" id="formFileMultiple" accept="image/*">--}}
-                <!-- submit btn -->
-                <div class="col-auto">
-                    <button type="submit" class="btn btn-primary mb-3 ps-5 pe-5 pt-2 pb-2 ">ثبت</button>
+                    <!-- submit btn -->
+                    <div class="col-auto">
+                        <button type="submit" class="btn btn-primary mb-3 ps-5 pe-5 pt-2 pb-2 ">ثبت</button>
+                    </div>
                 </div>
 
             </form>
