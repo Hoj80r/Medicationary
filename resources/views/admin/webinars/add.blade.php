@@ -43,7 +43,15 @@
                     {{-- webinar hoolder pic --}}
                     <label for="thumbnail_url">تصویر برگذارکننده</label>
                     <input class="form-control mt-2 col-12" type="file" id="formFileMultiple" name="thumbnail_url" accept="image/*">
+
+                    <select class="form-select mt-3 text-center" aria-label="Default select example">
+                        <option selected>وضعیت وبینار</option>
+                        <option value="1">درحال برگذاری</option>
+                        <option value="2">به اتمام رسیده</option>
+                    </select>
+
                 </div>
+
                 <!-- discription input -->
                 <div class="col-8">
                     <textarea class="form-control" required rows="5" dir="rtl" name="description" placeholder="توضیحات"></textarea>
