@@ -58,10 +58,12 @@
         </span>
         <input type="text" class="form-control" placeholder="name@example.com" name="email" aria-label="Username" aria-describedby="basic-addon1" required>
       </div>
-      <!-- file input -->
-      <div class="input-group mb-3" dir="rtl">
-          <input class="form-control m-3 text-start" type="tel" name="mobile" placeholder="09xxxxxxxxx">
-{{--        <input class="form-control" type="file" name="file" id=" formFileMultiple" multiple>--}}
+      <!-- phone input -->
+      <div class="input-group mb-3">
+        <input type="tel" name="mobile" class="form-control" placeholder="09xxxxxxxxx" name="name" aria-label="Username" aria-describedby="basic-addon1">
+        <span class="input-group-text" id="basic-addon1">
+            <svg xmlns="http://www.w3.org/2000/svg" width="43.75" height="50" viewBox="0 0 448 512"><path fill="#4867BC" d="M400 32H48C21.49 32 0 53.49 0 80v352c0 26.51 21.49 48 48 48h352c26.51 0 48-21.49 48-48V80c0-26.51-21.49-48-48-48M94 416c-7.033 0-13.057-4.873-14.616-11.627l-14.998-65a15 15 0 0 1 8.707-17.16l69.998-29.999a15 15 0 0 1 17.518 4.289l30.997 37.885c48.944-22.963 88.297-62.858 110.781-110.78l-37.886-30.997a15 15 0 0 1-4.289-17.518l30-69.998a15 15 0 0 1 17.16-8.707l65 14.998A15 15 0 0 1 384 126c0 160.292-129.945 290-290 290"/></svg>
+        </span>
       </div>
     </div>
      </div>
