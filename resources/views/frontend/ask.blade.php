@@ -19,7 +19,7 @@
       <!-- qusetion and tittle section -->
      <div id="ask-left-items" class="col-12 p-3 col-lg-6">
       <div class="input-group mb-3">
-        <input type="text" class="form-control" placeholder="عنوان پرسش" name="question_title" dir="rtl" required>
+        <input type="text" id="questionTitle" class="form-control" placeholder="عنوان پرسش" name="question_title" dir="rtl" required>
         <span class="input-group-text" id="basic-addon1">
           <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 24 24"><path fill="#4867bc" d="M4 20q-.825 0-1.413-.588T2 18V6q0-.825.588-1.413T4 4h16q.825 0 1.413.588T22 6v12q0 .825-.588 1.413T20 20H4Zm2-4h8v-2H6v2Zm10 0h2v-2h-2v2ZM6 12h2v-2H6v2Zm4 0h8v-2h-8v2Z"/></svg>
         </span>
@@ -56,11 +56,11 @@
           </svg>
 
         </span>
-        <input type="text" class="form-control" placeholder="name@example.com" name="email" aria-label="Username" aria-describedby="basic-addon1" required>
+        <input type="text" id="askEmailInput" class="form-control" placeholder="name@example.com" name="email" aria-label="Username" aria-describedby="basic-addon1" >
       </div>
       <!-- phone input -->
       <div class="input-group mb-3">
-        <input type="tel" name="mobile" class="form-control" placeholder="09xxxxxxxxx" name="name" aria-label="Username" aria-describedby="basic-addon1">
+        <input type="tel" name="mobile" id="askPhoneInput" class="form-control" placeholder="09xxxxxxxxx" name="name" aria-label="Username" aria-describedby="basic-addon1">
         <span class="input-group-text" id="basic-addon1">
             <svg xmlns="http://www.w3.org/2000/svg" width="43.75" height="50" viewBox="0 0 448 512"><path fill="#4867BC" d="M400 32H48C21.49 32 0 53.49 0 80v352c0 26.51 21.49 48 48 48h352c26.51 0 48-21.49 48-48V80c0-26.51-21.49-48-48-48M94 416c-7.033 0-13.057-4.873-14.616-11.627l-14.998-65a15 15 0 0 1 8.707-17.16l69.998-29.999a15 15 0 0 1 17.518 4.289l30.997 37.885c48.944-22.963 88.297-62.858 110.781-110.78l-37.886-30.997a15 15 0 0 1-4.289-17.518l30-69.998a15 15 0 0 1 17.16-8.707l65 14.998A15 15 0 0 1 384 126c0 160.292-129.945 290-290 290"/></svg>
         </span>
@@ -70,7 +70,7 @@
 
     <!-- submit btn -->
     <div class="col-12 m-3  text-center col-lg-2 m-lg-0 lg-hidden h-auto ">
-      <button type="submit" class="btn p-2 w-50 h-100 " style="color: #fff; background-color: #4867BC;">ارسال</button>
+      <button id="askSubBtn" type="submit" class="btn p-2 w-50 h-100 " style="color: #fff; background-color: #4867BC;">ارسال</button>
     </div>
 
     </form>
