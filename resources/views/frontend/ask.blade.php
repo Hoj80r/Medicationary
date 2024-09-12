@@ -19,7 +19,7 @@
       <!-- qusetion and tittle section -->
      <div id="ask-left-items" class="col-12 p-3 col-lg-6">
       <div class="input-group mb-3">
-        <input type="text" class="form-control" placeholder="عنوان پرسش" name="question_title" dir="rtl" required>
+        <input type="text" id="questionTitle" class="form-control" placeholder="عنوان پرسش" name="question_title" dir="rtl" required>
         <span class="input-group-text" id="basic-addon1">
           <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 24 24"><path fill="#4867bc" d="M4 20q-.825 0-1.413-.588T2 18V6q0-.825.588-1.413T4 4h16q.825 0 1.413.588T22 6v12q0 .825-.588 1.413T20 20H4Zm2-4h8v-2H6v2Zm10 0h2v-2h-2v2ZM6 12h2v-2H6v2Zm4 0h8v-2h-8v2Z"/></svg>
         </span>
@@ -56,7 +56,7 @@
           </svg>
 
         </span>
-        <input type="text" id="askEmailInput" class="form-control" placeholder="name@example.com" name="email" aria-label="Username" aria-describedby="basic-addon1" required>
+        <input type="text" id="askEmailInput" class="form-control" placeholder="name@example.com" name="email" aria-label="Username" aria-describedby="basic-addon1" >
       </div>
       <!-- phone input -->
       <div class="input-group mb-3">

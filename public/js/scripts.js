@@ -1,3 +1,26 @@
+// ask page codes
+
+const askEmail = document.getElementById('askEmailInput');
+const askPhone = document.getElementById('askPhoneInput');
+const askTitle =document.getElementById('questionTitle');
+
+askTitle.addEventListener('onchange',function () {
+
+    if (askEmail.value == ''){
+        askPhone.setAttribute('required','');
+    }else{
+        askPhone.removeAttribute('required');
+    }
+
+})
+
+
+
+
+
+
+//Podcast codes
+
 // cods fot btn animatios
 
 // imports the Lottie library via Skypack
@@ -145,4 +168,7 @@ volumeSlider.addEventListener('input', (e) => {
   outputContainer.textContent = value;
   audio.volume = value / 100;
 });
+
+
+
 
