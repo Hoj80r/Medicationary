@@ -59,7 +59,6 @@ Route::prefix('admin')->group(function(){
         Route::prefix('inquiries')->middleware('auth')->group(function (){
             Route::get('',[InquiriesController::class, 'landscape'])->name('admin.inquiries.landscape');
             Route::get('input',[InquiriesController::class, 'input'])->name('admin.inquiries.input');
-            Route::post('add',[InquiriesController::class, 'addInquiries'])->name('admin.inquiries.addInquiries');
             Route::get('{question_id}/answer',[InquiriesController::class, 'answer'])->name('admin.inquiries.answer');
             Route::post('{question_id}/insert',[InquiriesController::class, 'insert'])->name('admin.inquiries.insert');
             Route::get('{answer_id}/edit',[InquiriesController::class, 'edit'])->name('admin.inquiries.edit');
@@ -83,6 +82,7 @@ Route::prefix('')->group(function (){
     Route::get('webinars',[WeblogController::class, 'webinars'])->name('home.webinar');
     Route::get('webinar/{webinar_id}/webinarPlayer',[WeblogController::class, 'webinarPlayer'])->name('home.webinarPlayer');
     Route::get('ask',[WeblogController::class, 'ask'])->name('home.ask');
+    Route::post('add',[InquiriesController::class, 'addInquiries'])->name('admin.inquiries.addInquiries');
     Route::get('responses',[WeblogController::class, 'responses'])->name('home.responses');
     Route::get('podcast',[WeblogController::class, 'podcast'])->name('home.podcast');
     Route::get('blog',[WeblogController::class, 'blog'])->name('home.blog');

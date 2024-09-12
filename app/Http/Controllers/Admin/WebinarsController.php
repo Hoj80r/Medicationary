@@ -31,10 +31,13 @@ class WebinarsController extends Controller
 
         $validatedData = $request->validated();
 
+        $currentUser = auth()->user();
+
         $createdWebinar = Webinar::create([
             'title' => $validatedData['title'],
             'category' => $validatedData['category'],
             'description' => $validatedData['description'],
+            'user_id' => $currentUser['id']
         ]);
 
         if (!$this->uploadImage($createdWebinar, $validatedData) or !$createdWebinar) {
@@ -58,12 +61,15 @@ class WebinarsController extends Controller
     public function update(UpdateRequest $request, $webinar_id){
         $validatedData = $request->validated();
 
+        $currentUser = auth()->user();
+
         $webinar = Webinar::findOrFail($webinar_id);
 
         $updatedWebinar = $webinar->update([
             'title' => $validatedData['title'],
             'category' => $validatedData['category'],
             'description' => $validatedData['description'],
+            'user_id' => $currentUser['id']
         ]);
 
         if (!$this->uploadImage($webinar, $validatedData) or !$updatedWebinar) {

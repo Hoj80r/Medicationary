@@ -22,8 +22,13 @@
         @foreach($questions as $question)
         <div class="list-page-items d-flex justify-content-start align-items-center mt-3 p-4 text-center">
             <div class="display-4 col-1">{{$question->id}}</div>
+<<<<<<< HEAD
             <div class="display-4 col-2">{{$question->created_at}}</div>
             <div class="display-4 col-8 overflow-hidden p-0">
+=======
+            <div class="display-4 col-2">{{$question->created_at->jdate('j F Y')}}</div>
+            <div id="admin-ask-title" class="display-4 col-8 overflow-hidden">
+>>>>>>> 33bfc619907498f2a1cc84a430a70b920053bb97
                 {{$question->title}}
             </div>
             <div class="list-icons d-flex justify-content-around col-1 pe-4 ps-4" title="جواب دادن به پرسش">

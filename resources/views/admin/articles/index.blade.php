@@ -27,7 +27,7 @@
                 <div class="display-4 col-1">{{$post->id}}</div>
                 <div class="display-4 col-2">{{$post->user_id}}</div>
                 <div class="display-4 col-2">{{$post->title}}</div>
-                <div class="display-4 col-2">{{$post->created_at}}</div>
+                <div class="display-4 col-2">{{$post->created_at->jdate('j F Y')}}</div>
                 <button type="button" class="btn btn-secondary col-2" data-bs-container="body" data-bs-toggle="popover"
                         data-bs-placement="bottom"
                         data-bs-content="{!! substr($post->body, 0, 70) !!}">
