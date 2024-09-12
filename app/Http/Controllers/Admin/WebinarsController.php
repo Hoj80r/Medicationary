@@ -34,10 +34,12 @@ class WebinarsController extends Controller
         $currentUser = auth()->user();
 
         $createdWebinar = Webinar::create([
+            'user_id' => $currentUser['id'],
             'title' => $validatedData['title'],
             'category' => $validatedData['category'],
             'description' => $validatedData['description'],
-            'user_id' => $currentUser['id']
+            'instructor' => $validatedData['instructor'],
+            'webinar_status' => $validatedData['webinar_status'],
         ]);
 
         if (!$this->uploadImage($createdWebinar, $validatedData) or !$createdWebinar) {
@@ -69,6 +71,8 @@ class WebinarsController extends Controller
             'title' => $validatedData['title'],
             'category' => $validatedData['category'],
             'description' => $validatedData['description'],
+            'instructor' => $validatedData['instructor'],
+            'webinar_status' => $validatedData['webinar_status'],
             'user_id' => $currentUser['id']
         ]);
 
@@ -97,7 +101,7 @@ class WebinarsController extends Controller
             $data = [];
 
             if (isset($validatedData['thumbnail_url'])) {
-                $path = 'webinar/' . $createdWebinar->id . '/' . $validatedData['thumbnail_url']->getClientOriginalName();
+                $path = 'webinars/' . $createdWebinar->id . '/' . $validatedData['thumbnail_url']->getClientOriginalName();
 
                 ImageUploader::Upload($validatedData['thumbnail_url'], $path, 'public_storage');
 
@@ -105,12 +109,19 @@ class WebinarsController extends Controller
             }
 
             if (isset($validatedData['webinar_url'])) {
-                $path = 'webinar/' . $createdWebinar->id . '/' . $validatedData['webinar_url']->getClientOriginalName();
+                $path = 'webinars/' . $createdWebinar->id . '/' . $validatedData['webinar_url']->getClientOriginalName();
 
                 ImageUploader::Upload($validatedData['webinar_url'], $path, 'public_storage');
 
                 $data += ['webinar_url' => $path];
+            }
 
+            if (isset($validatedData['instructor_thumbnail_url'])) {
+                $path = 'webinars/' . $createdWebinar->id . '/' . $validatedData['instructor_thumbnail_url']->getClientOriginalName();
+
+                ImageUploader::Upload($validatedData['instructor_thumbnail_url'], $path, 'public_storage');
+
+                $data += ['instructor_thumbnail_url' => $path];
             }
 
             $updatedWebinar = $createdWebinar->Update($data);

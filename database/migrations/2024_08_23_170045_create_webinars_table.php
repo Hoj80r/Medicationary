@@ -16,6 +16,9 @@ return new class extends Migration
             $table->foreignIdFor(\App\Models\User::class)->constrained()->restrictOnDelete();
             $table->char('title',255);
             $table->char('category');
+            $table->char('instructor');
+            $table->char('instructor_thumbnail_url')->nullable();
+            $table->enum('webinar_status', ['terminated', 'alive']);
             $table->char('description');
             $table->char('webinar_url')->nullable();
             $table->char('thumbnail_url')->nullable();

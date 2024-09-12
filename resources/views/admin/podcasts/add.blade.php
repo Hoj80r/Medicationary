@@ -42,7 +42,7 @@
                     <label for="thumbnail_url">افزودن تامبنیل پادکست</label>
                     <input class="form-control m-3" type="file" id="formFileMultiple" name="thumbnail_url" multiple title="افزودن تامبنیل">
                     <label for="thumbnail_url" class="">افزودن فایل پادکست</label>
-                    <input class="form-control m-3" type="file" id="formFileMultiple" name="thumbnail_url" multiple>
+                    <input class="form-control m-3" type="file" id="formFileMultiple" name="podcast_url" multiple>
                     <!-- submit btn -->
                     <div class="col-auto">
                         <button type="submit" class="btn btn-primary mb-3 ps-5 pe-5 pt-2 pb-2 ">ثبت</button>

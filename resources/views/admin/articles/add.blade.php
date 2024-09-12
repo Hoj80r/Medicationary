@@ -29,19 +29,19 @@
             </div>
             <div class="col-xl-5 col-12 mb-3">
                 {{-- author input --}}
-                <input type="text" class="form-control text-center" placeholder="نویسنده" name="authorName" required>
+                <input type="text" class="form-control text-center" placeholder="نویسنده" name="author" required>
             </div>
 
             <!-- discription input -->
             <div class="col-8">
-                <textarea class="form-control" required rows="5" cols="8" dir="rtl" placeholder="توضیحات" name="body"></textarea>
+                <textarea class="form-control" required rows="5" cols="8" dir="rtl" placeholder="توضیحات" name="abstract"></textarea>
             </div>
             <!-- file upload area -->
             <div class="col-10 mt-3 text-center">
                 <label for="thumbnail_url">افزودن تامبنیل مقاله</label>
                 <input class="form-control m-3" type="file" id="formFileMultiple" name="thumbnail_url" multiple title="افزودن تامبنیل">
                 <label for="thumbnail_url" class="">افزودن فایل مقاله</label>
-                <input class="form-control m-3" type="file" id="formFileMultiple" name="thumbnail_url" multiple>
+                <input class="form-control m-3" type="file" id="formFileMultiple" name="post_url" multiple>
                 <!-- submit btn -->
                 <div class="col-auto">
                     <button type="submit" class="btn btn-primary mb-3 ps-5 pe-5 pt-2 pb-2 ">ثبت</button>

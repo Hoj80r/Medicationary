@@ -22,7 +22,7 @@
 
         <div class="answer-text mt-3 p-3">
             @include('errors.message')
-            <form action="{{ route('admin.post.store') }}" method="post" class="d-flex justify-content-center flex-wrap mt-5" enctype="multipart/form-data" dir="ltr">
+            <form action="{{ route('admin.inquiries.insert', $question->id) }}" method="post" class="d-flex justify-content-center flex-wrap mt-5" enctype="multipart/form-data" dir="ltr">
                 @csrf
                 <div class="input-group mb-3 w-100" >
 
@@ -39,12 +39,12 @@
 
                 <!-- discription input -->
                 <div class="col-8">
-                    <textarea class="form-control" required rows="5" dir="rtl" placeholder="جواب پرسش" name="body"></textarea>
+                    <textarea class="form-control" required rows="5" dir="rtl" placeholder="جواب پرسش" name="description"></textarea>
                 </div>
                 <!-- file upload area -->
                 <div class="col-10 mt-3 text-center">
                     <label for="thumbnail_url">افزودن مقاله مربوط به پرسش</label>
-                    <input class="form-control m-3" type="file" id="formFileMultiple" name="thumbnail_url" multiple title="افزودن تامبنیل">
+                    <input class="form-control m-3" type="file" id="formFileMultiple" name="file_url" multiple title="افزودن تامبنیل">
 
                     <!-- submit btn -->
                     <div class="col-auto">

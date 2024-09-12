@@ -40,7 +40,7 @@
                   </span>
                     <form action="{{ route('admin.login.check') }}" method="post">
                         @csrf
-                  <input type="email" name="email_X" id="typeEmailX" class="form-control form-control-lg text-center" placeholder="شماره موبایل یا ایمیل" />
+                  <input type="email" name="email_X" id="typeEmailX" class="form-control form-control-lg text-center" placeholder="ایمیل" />
                 </div>
 
                 <div class="input-group mb-4">

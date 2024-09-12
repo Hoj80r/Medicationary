@@ -138,6 +138,14 @@ class InquiriesController extends Controller
                 $data += ['thumbnail_url' => $path] ;
             }
 
+            if (isset($validatedData['file_url'])){
+                $path = 'Answers/' . $createdAnswer->id . '/' . $validatedData['file_url']->getClientOriginalName();
+
+                ImageUploader::Upload($validatedData['file_url'],$path,'public_storage');
+
+                $data += ['file_url' => $path] ;
+            }
+
             $updatedAnswer = $createdAnswer->Update($data);
 
             if(!$updatedAnswer){

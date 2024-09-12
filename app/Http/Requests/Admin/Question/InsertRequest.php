@@ -26,6 +26,7 @@ class InsertRequest extends FormRequest
             'title' => 'required|min:3|max:75',
             'category' => 'required|min:5|max:50',
             'description' => 'required|min:5',
+            'file_url' => 'required|file|mimes:pdf',
             'thumbnail_url' => 'required|image|mimes:png,jpeg,jpg'
         ];
     }

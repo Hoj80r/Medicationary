@@ -24,9 +24,10 @@ class UpdateRequest extends FormRequest
         return [
             'title' => 'required|min:3|max:50',
             'category' => 'required|min:3|max:50',
-            'body' => 'required|min:10',
+            'author' => 'required|min:3|max:50',
+            'abstract' => 'required|min:10',
+            'post_url' => 'nullable|file|mimes:pdf',
             'thumbnail_url' => 'nullable|image|mimes:jpeg,png,jpg'
-
         ];
     }
 }

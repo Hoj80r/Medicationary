@@ -46,7 +46,8 @@ class PostController extends Controller
             'user_id' => $currentUser['id'],
             'title' => $validatedData['title'],
             'category' => $validatedData['category'],
-            'body' => $validatedData['body'],
+            'abstract' => $validatedData['abstract'],
+            'author' => $validatedData['author'],
         ]);
 
         if (!$this->uploadImage($createdPost, $validatedData) or !$createdPost){
@@ -91,7 +92,8 @@ class PostController extends Controller
             'user_id' => $currentUser['id'],
             'title' => $validatedData['title'],
             'category' => $validatedData['category'],
-            'body' => $validatedData['body'],
+            'abstract' => $validatedData['abstract'],
+            'author' => $validatedData['author'],
         ]);
 
         if (!$this->uploadImage($post, $validatedData) or !$updatePost){
@@ -124,6 +126,14 @@ class PostController extends Controller
                 ImageUploader::Upload($validatedData['thumbnail_url'],$path,'public_storage');
 
                 $data += ['thumbnail_url' => $path] ;
+            }
+
+            if (isset($validatedData['post_url'])){
+                $path = 'Posts/' . $createdPost->id . '/' . $validatedData['post_url']->getClientOriginalName();
+
+                ImageUploader::Upload($validatedData['post_url'],$path,'public_storage');
+
+                $data += ['post_url' => $path] ;
             }
 
             $updatedUser = $createdPost->Update($data);

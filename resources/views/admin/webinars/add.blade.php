@@ -39,15 +39,15 @@
                 </div>
                 <div class="col-xl-5 col-12 mb-3 text-center">
                     {{-- author input --}}
-                    <input type="text" class="form-control text-center mb-3 col-12" placeholder="نام برگذارکننده" name="authorName" required>
+                    <input type="text" class="form-control text-center mb-3 col-12" placeholder="نام برگذارکننده" name="instructor" required>
                     {{-- webinar hoolder pic --}}
                     <label for="thumbnail_url">تصویر برگذارکننده</label>
-                    <input class="form-control mt-2 col-12" type="file" id="formFileMultiple" name="thumbnail_url" accept="image/*">
+                    <input class="form-control mt-2 col-12" type="file" id="formFileMultiple" name="instructor_thumbnail_url" accept="image/*">
 
-                    <select class="form-select mt-3 text-center" aria-label="Default select example">
+                    <select class="form-select mt-3 text-center" aria-label="Default select example" name="webinar_status">
                         <option selected>وضعیت وبینار</option>
-                        <option value="1">درحال برگذاری</option>
-                        <option value="2">به اتمام رسیده</option>
+                        <option value="alive">درحال برگذاری</option>
+                        <option value="terminated">به اتمام رسیده</option>
                     </select>
 
                 </div>
@@ -61,7 +61,7 @@
                     <label for="thumbnail_url">افزودن تامبنیل وبینار</label>
                     <input class="form-control m-3" type="file" id="formFileMultiple" name="thumbnail_url" multiple title="افزودن تامبنیل">
                     <label for="thumbnail_url" class="">افزودن فایل وبینار</label>
-                    <input class="form-control m-3" type="file" id="formFileMultiple" name="thumbnail_url" multiple>
+                    <input class="form-control m-3" type="file" id="formFileMultiple" name="webinar_url" multiple>
                     <!-- submit btn -->
                     <div class="col-auto">
                         <button type="submit" class="btn btn-primary mb-3 ps-5 pe-5 pt-2 pb-2 ">ثبت</button>

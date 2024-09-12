@@ -25,9 +25,10 @@ class BlogRequest extends FormRequest
 //            'user_id' => 'required|exists:users,id',
             'title' => 'required|min:3|max:50',
             'category' => 'required|min:3|max:50',
-            'body' => 'required|min:10',
+            'author' => 'required|min:3|max:50',
+            'abstract' => 'required|min:10',
+            'post_url' => 'required|file|mimes:pdf',
             'thumbnail_url' => 'required|image|mimes:jpeg,png,jpg'
-
 
         ];
     }
