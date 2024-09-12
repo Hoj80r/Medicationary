@@ -70,7 +70,7 @@
 
     <!-- submit btn -->
     <div class="col-12 m-3  text-center col-lg-2 m-lg-0 lg-hidden h-auto ">
-      <button type="submit" class="btn p-2 w-50 h-100 " style="color: #fff; background-color: #4867BC;">ارسال</button>
+      <button id="askSubBtn" type="submit" class="btn p-2 w-50 h-100 " style="color: #fff; background-color: #4867BC;">ارسال</button>
     </div>
 
     </form>

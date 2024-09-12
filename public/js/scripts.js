@@ -2,17 +2,16 @@
 
 const askEmail = document.getElementById('askEmailInput');
 const askPhone = document.getElementById('askPhoneInput');
-const askTitle =document.getElementById('questionTitle');
+const askSubBtn = document.getElementById('askSubBtn')
 
-askTitle.addEventListener('onchange',function () {
+askSubBtn.addEventListener('click',function () {
 
-    if (askEmail.value == ''){
-        askPhone.setAttribute('required','');
-    }else{
+    if (askEmail.value != ''){
         askPhone.removeAttribute('required');
-    }
-
-})
+    }else{
+        askPhone.setAttribute('required','');
+    };
+});
 
 
 
