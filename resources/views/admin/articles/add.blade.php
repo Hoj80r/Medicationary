@@ -16,7 +16,6 @@
         <form action="{{ route('admin.post.store') }}" method="post" class="d-flex justify-content-center flex-wrap mt-5" enctype="multipart/form-data">
             @csrf
             <div class="input-group mb-3 w-100" >
-
                 <!-- category input -->
                 <input type="text" class="form-control text-center" placeholder="دسته بندی" name="category" required>
                 <!-- middle pic -->
@@ -48,8 +47,7 @@
                 </div>
 
             </div>
-{{--            <label for="file">Thumbnail Input</label>--}}
-{{--            <input class="form-control m-3" type="file" id="formFileMultiple" accept="image/*">--}}
+
 
 
         </form>
