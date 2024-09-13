@@ -15,9 +15,9 @@
       @foreach($podcasts as $podcast)
     <div id="podcast-player" class=" p-3 mb-5 mt-5 bg-body-tertiary rounded-3 w-auto h-25 d-md-flex flex-wrap justify-content-between">
 
-        <img src="/{{$podcast->thumbnail_url}}" alt="podcast-tumbnail" class="h-auto p-1 col-12 col-md-4 rounded-4 d-inline object-fit-fill">
+        <img src="/{{$podcast->thumbnail_url}}" alt="podcast-tumbnail" class=" p-1 col-12 col-md-3 rounded-4 d-inline object-fit-fill ">
 
-        <div id="podcast-content" class=" col-12 col-md-7 d-flex flex-column justify-content-between">
+        <div id="podcast-content" class=" col-12 col-md-8 d-flex flex-column justify-content-between">
 
             <div id="opdcast-info" class="col-12 d-flex flex-column ">
 
