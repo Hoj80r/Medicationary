@@ -47,6 +47,9 @@ Route::prefix('admin')->group(function(){
             Route::get('{webinar_id}/edit',[WebinarsController::class, 'edit'])->name('admin.webinars.edit');
             Route::put('{webinar_id}/update',[WebinarsController::class, 'update'])->name('admin.webinars.update');
             Route::delete('{webinar_id}/delete',[WebinarsController::class, 'delete'])->name('admin.webinars.delete');
+
+            Route::get('{product_id}/download',[WebinarsController::class,'download'])->name('admin.webinars.download');
+
         });
         Route::prefix('podcasts')->middleware('auth')->group(function (){
             Route::get('',[PodcastsController::class, 'landscape'])->name('admin.podcasts.landscape');
@@ -55,6 +58,9 @@ Route::prefix('admin')->group(function(){
             Route::get('{podcast_id}/edit', [PodcastsController::class, 'edit'])->name('admin.podcasts.edit');
             Route::put('{podcast_id}/update', [PodcastsController::class, 'update'])->name('admin.podcasts.update');
             Route::delete('{podcast_id}/delete', [PodcastsController::class, 'delete'])->name('admin.podcasts.delete');
+
+            Route::get('{product_id}/download',[PodcastsController::class,'download'])->name('admin.podcasts.download');
+
         });
         Route::prefix('inquiries')->middleware('auth')->group(function (){
             Route::get('',[InquiriesController::class, 'landscape'])->name('admin.inquiries.landscape');
@@ -64,6 +70,9 @@ Route::prefix('admin')->group(function(){
             Route::get('{answer_id}/edit',[InquiriesController::class, 'edit'])->name('admin.inquiries.edit');
             Route::put('{answer_id}/update',[InquiriesController::class, 'update'])->name('admin.inquiries.update');
             Route::delete('{answer_id}/delete',[InquiriesController::class, 'delete'])->name('admin.inquiries.delete');
+
+            Route::get('{product_id}/download',[InquiriesController::class,'download'])->name('admin.inquiries.download');
+
         });
         Route::prefix('post')->middleware('auth')->group(function (){
             Route::get('',[PostController::class, 'index'])->name('admin.post.index');
@@ -73,13 +82,15 @@ Route::prefix('admin')->group(function(){
             Route::put('{post_id}/update',[PostController::class, 'update'])->name('admin.post.update');
             Route::delete('{post_id}/delete',[PostController::class, 'delete'])->name('admin.post.delete');
 //            Route::get('create',[CommentController::class, 'create'])->name('admin.articles.create');
+            Route::get('{product_id}/download',[PostController::class,'download'])->name('admin.post.download');
+
         });
 
 });
 
 Route::prefix('')->group(function (){
     Route::get('',[AccueilController::class, 'landscape'])->name('home.landscape');
-    Route::get('webinars',[WeblogController::class, 'webinars'])->name('home.webinar');
+    Route::get('webinarsList',[WeblogController::class, 'webinars'])->name('home.webinarsList');
     Route::get('webinar/{webinar_id}/webinarPlayer',[WeblogController::class, 'webinarPlayer'])->name('home.webinarPlayer');
     Route::get('ask',[WeblogController::class, 'ask'])->name('home.ask');
     Route::post('add',[InquiriesController::class, 'addInquiries'])->name('admin.inquiries.addInquiries');

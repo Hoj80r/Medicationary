@@ -84,6 +84,13 @@ class WebinarsController extends Controller
 
     }
 
+    public function download($webinar_id)
+    {
+        $webinar = Webinar::findOrFail($webinar_id);
+
+        return response()->download(public_path($webinar->webinar_url));
+    }
+
     public function delete($webinar_id){
         $webinar = Webinar::findOrFail($webinar_id);
 
