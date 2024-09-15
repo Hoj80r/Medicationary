@@ -38,15 +38,16 @@
                 </div>
                 <div class="col-xl-5 col-12 mb-3 text-center">
                     {{-- author input --}}
-                    <input type="text" class="form-control text-center mb-3 col-12" placeholder="نام برگذارکننده" name="instructor" required>
+                    <input type="text" class="form-control text-center mb-3 col-12" value="{{$webinar->instructor}}" placeholder="نام برگذارکننده" name="instructor" required>
                     {{-- webinar hoolder pic --}}
-                    <label for="thumbnail_url">تصویر برگذارکننده</label>
+                    <label for="thumbnail_url"><b>تصویر برگذارکننده</b></label>
+                    <br>
+                    <img src="/{{ $webinar->thumbnail_url }}" alt="" height="100px" width="100px" class="rounded mt-3">
                     <input class="form-control mt-2 col-12" type="file" id="formFileMultiple" name="instructor_thumbnail_url" accept="image/*">
 
                     <select class="form-select mt-3 text-center" aria-label="Default select example" name="webinar_status">
-                        <option selected>وضعیت وبینار</option>
-                        <option value="alive">درحال برگذاری</option>
-                        <option value="terminated">به اتمام رسیده</option>
+                        <option value="alive" {{$webinar->webinar_status == 'alive' ? 'selected' : ''}}>درحال برگذاری</option>
+                        <option value="terminated" {{$webinar->webinar_status == 'terminated' ? 'selected' : ''}}>به اتمام رسیده</option>
                     </select>
 
                 </div>
@@ -57,14 +58,14 @@
                 <!-- file upload area -->
                 <div class="col-10 mt-3 text-center">
 
-                    <label for="thumbnail_url">افزودن تامبنیل وبینار</label>
+                    <label for="thumbnail_url"><b> تامبنیل وبینار</b></label>
                     <br>
                     <img src="/{{ $webinar->thumbnail_url }}" alt="" height="100px" width="100px" class="rounded">
                     <input class="form-control m-3" type="file" id="formFileMultiple" name="thumbnail_url" multiple title="افزودن تامبنیل">
 
-                    <label for="thumbnail_url" class="">افزودن فایل وبینار</label>
+                    <label for="thumbnail_url" class=""><b> فایل وبینار</b></label>
                     <br>
-                    current video file: {{$webinar->webinar_url}}
+                    Current video file: {{$webinar->webinar_url}}
                     <input class="form-control m-3" type="file" name="webinar_url" id="formFileMultiple" multiple>
                     <!-- submit btn -->
                     <div class="col-auto">
