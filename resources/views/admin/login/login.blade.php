@@ -25,8 +25,9 @@
                   @include('errors.message')
 
 
-
-                <div class="input-group mb-4 mt-5">
+            <form action="{{ route('admin.login.check') }}" method="post">
+            @csrf
+                <div class="input-group mb-4 mt-5" dir="ltr">
                   <span class="input-group-text" id="basic-addon1"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="16" height="16" viewBox="0 0 16 16">
                     <defs>
                       <clipPath id="clip-path">
@@ -38,9 +39,8 @@
                     </g>
                   </svg>
                   </span>
-                    <form action="{{ route('admin.login.check') }}" method="post">
-                        @csrf
-                  <input type="email" name="email_X" id="typeEmailX" class="form-control form-control-lg text-center" placeholder="ایمیل" />
+
+                  <input type="email" name="email_X" id="typeEmailX" class="form-control form-control-lg text-center rounded-start-0" placeholder="ایمیل" />
                 </div>
 
                 <div class="input-group mb-4">
@@ -53,7 +53,7 @@
                 </div>
 
                 <button class="btn btn-lg px-5" id="log-btn" type="submit">ورود</button>
-                  </form>
+            </form>
 
             </div>
           </div>

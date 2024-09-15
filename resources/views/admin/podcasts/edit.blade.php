@@ -39,16 +39,21 @@
                     <textarea class="form-control" required rows="5" dir="rtl" name="description" placeholder="توضیحات">{{$podcast->description}}</textarea>
                 </div>
                 <!-- file upload area -->
-                Current Audio File: {{$podcast->podcast_url}}
-                <input class="form-control m-3" type="file" name="podcast_url" id="formFileMultiple" multiple>
-                <label for="file">Thumbnail Input</label>
-                <img src="/{{ $podcast->thumbnail_url }}" alt="" height="100px" width="100px">
-                <input class="form-control m-3" type="file" name="thumbnail_url" id="formFileMultiple" accept="image/*">
-                <!-- submit btn -->
-                <div class="col-auto">
-                    <button type="submit" class="btn btn-primary mb-3 ps-5 pe-5 pt-2 pb-2 ">ثبت</button>
-                </div>
+                <div class="col-10 mt-3 text-center">
+                    <label for="thumbnail_url">افزودن تامبنیل پادکست</label>
+                    <br>
+                    <img src="/{{ $podcast->thumbnail_url }}" alt="" height="100px" width="100px" class="rounded mt-3">
+                    <input class="form-control m-3" type="file" name="thumbnail_url" id="formFileMultiple" accept="image/*">
+                    <label for="thumbnail_url" class="">افزودن فایل پادکست</label>
+                    <br>
+                    Current Audio File: {{$podcast->podcast_url}}
+                    <input class="form-control m-3" type="file" name="podcast_url" id="formFileMultiple" multiple>
 
+                    <!-- submit btn -->
+                    <div class="col-auto">
+                        <button type="submit" class="btn btn-primary mb-3 ps-5 pe-5 pt-2 pb-2 ">ثبت</button>
+                    </div>
+                </div>
             </form>
 
         </div>
