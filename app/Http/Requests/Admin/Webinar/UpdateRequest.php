@@ -26,7 +26,7 @@ class UpdateRequest extends FormRequest
             'category' => 'required|min:3|max:128',
             'instructor' => 'required|min:3|max:50',
             'instructor_thumbnail_url' => 'nullable|image|mimes:jpeg,png,jpg',
-            'webinar_status' => 'required|in:alive, terminated',
+            'webinar_status' => 'required|in:alive,terminated',
             'description' => 'required|min:10',
             'webinar_url' => 'nullable|file|mimes:mp4,mkv',
             'thumbnail_url' => 'nullable|image|mimes:jpeg,png,jpg'];

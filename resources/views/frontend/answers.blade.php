@@ -26,7 +26,7 @@
           <p class="ask-discription overflow-scroll" style="height: 140px;">
               {{$response->description}}
           </p>
-          <a href="{{route('home.post', $post->id)}}"><button class="article-btn btn">مطالعه بیشتر</button></a>
+          <a href="{{route('home.post', $response->id)}}"><button class="article-btn btn">مطالعه بیشتر</button></a>
         </div>
       </div>
   </div>

@@ -23,12 +23,12 @@
 
         <p class="article-title h2">{{$post->title}}</p>
 
-        <p class="article-cat h3">نام نویسنده</p>
+        <p class="article-cat h3">نام نویسنده: {{$post->author}}</p>
 
-        <p class="article-date">{{$post->created_at}}</p>
+        <p class="article-date">{{$post->created_at->jdate('j F Y')}}</p>
 
-        <p class="article-discription">{{$post->body}}</p>
-
+        <p class="article-discription">{{$post->abstract}}</p>
+{{--          route('home.post', $post->id)--}}
         <a href="{{route('home.post', $post->id)}}"><button class="article-btn btn">مطالعه بیشتر</button></a>
       </div>
   </div>

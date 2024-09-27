@@ -17,6 +17,7 @@
             <div class="h4 col-1">#</div>
             <div class="h4 col-2">تاریخ ایجاد</div>
             <div class="h4 col-8 text-center">عنوان پرسش</div>
+
         </div>
 
         @foreach($questions as $question)

@@ -80,6 +80,13 @@ class PodcastsController extends Controller
 
     }
 
+    public function download($podcast_url)
+    {
+        $podcast = Podcast::findOrFail($podcast_url);
+
+        return response()->download(public_path($podcast->podcast_url));
+    }
+
     public function delete($podcast_id){
         $podcast = Podcast::findOrFail($podcast_id);
 

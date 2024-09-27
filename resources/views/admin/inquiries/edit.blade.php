@@ -26,25 +26,29 @@
                 <div class="input-group mb-3 w-100" >
 
                     <!-- category input -->
-                    <input type="text" class="form-control text-center" placeholder="دسته بندی" name="category" required>
+                    <input type="text" class="form-control text-center" placeholder="دسته بندی" name="category" value="{{$answer->category}}" required>
                     <!-- middle pic -->
                     <span class="input-group-text">
                         <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 64 64"><g transform="rotate(180 32 32)"><path fill="currentColor" d="M32 2C15.432 2 2 15.432 2 32s13.432 30 30 30s30-13.432 30-30S48.568 2 32 2zm0 57.5C16.836 59.5 4.5 47.164 4.5 32S16.836 4.5 32 4.5c15.163 0 27.5 12.336 27.5 27.5S47.163 59.5 32 59.5z"/><circle cx="20.5" cy="26.592" r="5" fill="currentColor"/><circle cx="43.5" cy="26.592" r="5" fill="currentColor"/><path fill="currentColor" d="M44.584 40.279c-8.11 5.656-17.106 5.623-25.168 0c-.97-.677-1.845.495-1.187 1.578c2.458 4.047 7.417 7.65 13.771 7.65s11.313-3.604 13.771-7.65c.658-1.083-.217-2.254-1.187-1.578"/></g></svg>
                     </span>
                     <!-- title input -->
-                    <input type="text" class="form-control text-center" placeholder="عنوان" name="title" required autofocus>
+                    <input type="text" class="form-control text-center" placeholder="عنوان" name="title" value="{{$answer->title}}" required autofocus>
 
                 </div>
 
                 <!-- discription input -->
                 <div class="col-8">
-                    <textarea class="form-control" required rows="5" dir="rtl" placeholder="جواب پرسش" name="description"></textarea>
+                    <textarea class="form-control" required rows="5" dir="rtl" placeholder="جواب پرسش" name="description">{{$answer->description}}</textarea>
                 </div>
                 <!-- file upload area -->
                 <div class="col-10 mt-3 text-center">
-                    <label for="thumbnail_url">افزودن مقاله مرتبط با سوال</label>
+                    <label for="thumbnail_url"><b>مقاله مرتبط با سوال</b></label>
+                    <br>
+                    Current Audio File: {{$answer->file_url}}
                     <input class="form-control m-3" type="file" id="formFileMultiple" name="thumbnail_url" multiple title="افزودن تامبنیل">
-                    <label for="thumbnail_url" class="">افزودن تامبنیل سوال</label>
+                    <label for="thumbnail_url" class=""> <b>تامبنیل سوال</b></label>
+                    <br>
+                    <img src="/{{ $answer->thumbnail_url }}" alt="" height="100px" width="100px" class="rounded mt-3">
                     <input class="form-control m-3" type="file" id="formFileMultiple" name="webinar_url" multiple>
                     <!-- submit btn -->
                     <div class="col-auto">

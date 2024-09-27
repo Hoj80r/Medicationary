@@ -45,7 +45,6 @@
                     <input class="form-control mt-2 col-12" type="file" id="formFileMultiple" name="instructor_thumbnail_url" accept="image/*">
 
                     <select class="form-select mt-3 text-center" aria-label="Default select example" name="webinar_status">
-                        <option selected>وضعیت وبینار</option>
                         <option value="alive">درحال برگذاری</option>
                         <option value="terminated">به اتمام رسیده</option>
                     </select>

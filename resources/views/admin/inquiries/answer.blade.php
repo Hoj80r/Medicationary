@@ -43,10 +43,10 @@
                 </div>
                 <!-- file upload area -->
                 <div class="col-10 mt-3 text-center">
-                    <label for="thumbnail_url">افزودن مقاله مرتبط با سوال</label>
-                    <input class="form-control m-3" type="file" id="formFileMultiple" name="thumbnail_url" multiple title="افزودن تامبنیل">
                     <label for="thumbnail_url" class="">افزودن تامبنیل سوال</label>
-                    <input class="form-control m-3" type="file" id="formFileMultiple" name="webinar_url" multiple>
+                    <input class="form-control m-3" type="file" id="formFileMultiple" name="thumbnail_url" multiple>
+                    <label for="thumbnail_url">افزودن مقاله مرتبط با سوال</label>
+                    <input class="form-control m-3" type="file" id="formFileMultiple" name="file_url" multiple title="افزودن تامبنیل">
                     <!-- submit btn -->
                     <div class="col-auto">
                         <button type="submit" class="btn btn-primary mb-3 ps-5 pe-5 pt-2 pb-2 ">ثبت</button>

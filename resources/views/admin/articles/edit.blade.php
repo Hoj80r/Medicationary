@@ -29,19 +29,21 @@
                 </div>
                 <div class="col-xl-5 col-12 mb-3">
                     {{-- author input --}}
-                    <input type="text" class="form-control text-center" placeholder="نویسنده" name="author" required>
+                    <input type="text" class="form-control text-center" placeholder="نویسنده" name="author" value="{{$post->author}}" required>
                 </div>
                 <!-- discription input -->
                 <div class="col-8">
-                    <textarea class="form-control" required rows="5" dir="rtl" placeholder="توضیحات" name="body">{{$post->body}}</textarea>
+                    <textarea class="form-control" required rows="5" dir="rtl" placeholder="توضیحات" name="body">{{$post->abstract}}</textarea>
                 </div>
                 <!-- file upload area -->
                 <div class="col-10 mt-3 text-center">
-                    <label for="thumbnail_url" class="mb-3">افزودن تامبنیل مقاله</label>
+                    <label for="thumbnail_url" class="mb-3"><b> تامبنیل مقاله</b></label>
                     <br>
                     <img src="/{{ $post->thumbnail_url }}" alt="" height="100px" width="100px" class="rounded" >
                     <input class="form-control m-3" type="file" id="formFileMultiple" name="thumbnail_url" multiple title="افزودن تامبنیل">
-                    <label for="thumbnail_url" class="">افزودن فایل مقاله</label>
+                    <label for="thumbnail_url" class=""><b> فایل مقاله</b></label>
+                    <br>
+                    Current file: {{$post->post_url}}
                     <input class="form-control m-3" type="file" id="formFileMultiple" name="post_url" multiple>
                     <!-- submit btn -->
                     <div class="col-auto">

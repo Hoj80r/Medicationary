@@ -40,11 +40,11 @@
                 </div>
                 <!-- file upload area -->
                 <div class="col-10 mt-3 text-center">
-                    <label for="thumbnail_url">افزودن تامبنیل پادکست</label>
+                    <label for="thumbnail_url"><b>تامبنیل پادکست</b></label>
                     <br>
                     <img src="/{{ $podcast->thumbnail_url }}" alt="" height="100px" width="100px" class="rounded mt-3">
                     <input class="form-control m-3" type="file" name="thumbnail_url" id="formFileMultiple" accept="image/*">
-                    <label for="thumbnail_url" class="">افزودن فایل پادکست</label>
+                    <label for="thumbnail_url" class=""> <b>فایل پادکست</b></label>
                     <br>
                     Current Audio File: {{$podcast->podcast_url}}
                     <input class="form-control m-3" type="file" name="podcast_url" id="formFileMultiple" multiple>

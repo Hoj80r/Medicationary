@@ -8,6 +8,7 @@ use App\Models\Podcast;
 use App\Models\Post;
 use App\Models\Webinar;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Response;
 
 class WeblogController extends Controller
 {
@@ -46,7 +47,9 @@ class WeblogController extends Controller
 
         $post = Post::findOrFail($post_id);
 
-        return view('frontend.post', compact('post'));
+        return response()->file($post->post_url);
+
+//        return view('frontend.post', compact('post'));
     }
     public function ask(){
 

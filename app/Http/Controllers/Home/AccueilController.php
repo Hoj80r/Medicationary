@@ -13,11 +13,9 @@ class AccueilController extends Controller
 {
     public function landscape(){
 
-        $posts = Post::latest()->take(3)->get();
+        $posts = Post::latest()->take(4)->get();
 
-        $podcasts = Podcast::latest()->take(2)->get();
-
-        return view('frontend.homePage', compact('posts', 'podcasts'));
+        return view('frontend.homePage', compact('posts'));
     }
 }
 

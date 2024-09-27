@@ -87,57 +87,36 @@
     <div id="blog-items" class="d-xl-flex justify-content-between" >
 
       <div id="blog-imp-article" class="col-xl-7 mb-3 p-0  float-xl-end " >
-        <a href="">
-          <img src="../images/1920x1080-the-last-of-us-poster_1535966498.jpg" alt="" id="imp-article-img" class="img-fluid object-fit-fill border rounded">
+        <a href="{{route('home.post',$posts[0]->id)}}">
+          <img src="/{{$posts[0]->thumbnail_url}}" alt="" id="imp-article-img" class="img-fluid object-fit-fill border rounded">
         </a>
 
-        <a href="">
+        <a href="{{route('home.post',$posts[0]->id)}}">
           <div id="blog-imp-title-article">
-            <p class="h3">عنوان مقاله پیشنهاد شده</p>
+            <p class="h3">{{$posts[0]->title}}</p>
           </div>
         </a>
 
         <div id="blog-imp-discription-article">
-          <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد </p>
+          <p>{{$posts[0]->abstract}}</p>
         </div>
       </div>
 
       <div class="flex-column col-xl-4">
+          @foreach($posts as $post)
+              @if($loop->first) @continue @endif
         <div id="blog-article" class="float-start d-xl-inline-block border-bottom border-secondary border-3" >
 
-            <a href="">
-              <img src="../images/2.jpg" alt="" id="article-img" class="col-4 float-end">
+            <a href="{{route('home.post',$post->id)}}">
+              <img src="/{{$post->thumbnail_url}}" alt="" id="article-img" class="col-4 float-end">
             </a>
             <div class="col-8 float-start" id="blog-article-discription" >
-              <a href=""><p class="h5">عنوان مقاله</p></a>
+              <a href="{{route('home.post',$post->id)}}"><p class="h5">{{$post->title}}</p></a>
 
-              <p style="width: 280px; height: 125px; overflow: hidden; margin-right: 35px;">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است </p>
+              <p style="width: 280px; height: 125px; overflow: hidden; margin-right: 35px;">{{$post->abstract}}</p>
             </div>
         </div>
-
-        <div id="blog-article" class="float-start d-xl-inline-block border-bottom border-secondary border-3" >
-
-            <a href="">
-              <img src="../images/2.jpg" alt="" id="article-img" class="col-4 float-end">
-            </a>
-            <div class="col-8 float-start" id="blog-article-discription" >
-              <a href=""><p class="h5">عنوان مقاله</p></a>
-
-              <p style="width: 280px; height: 125px; overflow: hidden; margin-right: 35px;">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است </p>
-            </div>
-        </div>
-
-        <div id="blog-article" class="float-start d-xl-inline-block" >
-
-            <a href="">
-              <img src="../images/2.jpg" alt="" id="article-img" class="col-4 float-end">
-            </a>
-            <div class="col-8 float-start" id="blog-article-discription" >
-              <a href=""><p class="h5">عنوان مقاله</p></a>
-
-              <p style="width: 280px; height: 125px; overflow: hidden; margin-right: 35px;">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است </p>
-            </div>
-        </div>
+          @endforeach
 
         </div>
       </div>

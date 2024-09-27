@@ -117,6 +117,13 @@ class InquiriesController extends Controller
 
     }
 
+    public function download($answer_id)
+    {
+        $answer = Answer::findOrFail($answer_id);
+
+        return response()->download(public_path($answer->file_url));
+    }
+
     public function delete($answer_id){
         $answer = Answer::findOrFail($answer_id);
 

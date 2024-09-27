@@ -18,7 +18,7 @@ class PostController extends Controller
     {
         $currentUser = auth()->user();
 
-        $posts = Post::latest()->with('user')->paginate(10);
+        $posts = Post::latest()->with('user')->paginate(3);
 
         return view('admin.articles.index', compact('currentUser', 'posts'));
     }
@@ -103,6 +103,14 @@ class PostController extends Controller
         return back()->with('success', 'پست به روزرسانی شدند');
     }
 
+    public function download($post_id)
+    {
+        dd();
+        $post = Post::findOrFail($post_id);
+
+        return response()->download(public_path($post->post_url));
+    }
+
     /**
      * Remove the specified resource from storage.
      */
@@ -136,9 +144,9 @@ class PostController extends Controller
                 $data += ['post_url' => $path] ;
             }
 
-            $updatedUser = $createdPost->Update($data);
+            $updatedPost = $createdPost->Update($data);
 
-            if(!$updatedUser){
+            if(!$updatedPost){
                 throw new \Exception('تصویر آپلود نشد');
             }
 
