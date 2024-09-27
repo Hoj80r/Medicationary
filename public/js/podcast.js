@@ -1,10 +1,3 @@
-
-
-
-
-
-
-
 //Podcast codes
 
 // cods fot btn animatios
@@ -13,17 +6,18 @@
 import lottieWeb from 'https://cdn.skypack.dev/lottie-web';
 
 // variable for the button that will contain both icons
-const playIconContainer = document.getElementById('pp-btn');
-const muteIconContainer = document.getElementById('mute-icon');
+let playIconContainer = document.getElementById('pp-btn');
+let muteIconContainer = document.getElementById('mute-icon');
 let playState = 'play';
 let muteState = 'unmute';
 let rAF = null;
 
 const whilePlaying = () => {
-  seekSlider.value = Math.floor(audio.currentTime);
-  currentTimeContainer.textContent = calculateTime(seekSlider.value);
-  rAF = requestAnimationFrame(whilePlaying);
+    seekSlider.value = Math.floor(audio.currentTime);
+    currentTimeContainer.textContent = calculateTime(seekSlider.value);
+    rAF = requestAnimationFrame(whilePlaying);
 }
+
 
 // loads the animation that transitions the play icon into the pause icon into the referenced button, using Lottie’s loadAnimation() method
 const animation = lottieWeb.loadAnimation({
@@ -35,7 +29,7 @@ const animation = lottieWeb.loadAnimation({
   name: "Demo Animation",
 });
 
-animation.setSpeed(2);
+animation.setSpeed(3);
 animation.goToAndStop(70 , false);
 
 
@@ -63,7 +57,7 @@ const muteAnimation = lottieWeb.loadAnimation({
     autoplay: false,
     name: "Mute Animation",
 });
-
+animation.setSpeed(4);
 muteAnimation.goToAndStop(24, true);
 
 muteIconContainer.addEventListener('click', () => {
@@ -78,12 +72,11 @@ muteIconContainer.addEventListener('click', () => {
     }
 });
 
+
 // the player codes
-const audio = document.querySelector('.podcastAudio');
-const durationContainer = document.getElementById('Duration');
-const seekSlider = document.getElementById('seek-slider');
-
-
+let audio = document.querySelector('.podcastAudio');
+let durationContainer = document.getElementById('Duration');
+let seekSlider = document.getElementById('seek-slider');
 
 // Transfer sec into min + sec
 const calculateTime = (secs) => {
@@ -103,54 +96,54 @@ const setSliderMax = () => {
     seekSlider.max = Math.floor(audio.duration);
 }
 
-// to shoe how much of the audio has been loaded
-const displayBufferedAmount = () => {
-    const bufferedAmount = Math.floor(audio.buffered.end(audio.buffered.length - 1));
-}
+// audio.addEventListener('loadedmetadata', () => {
+//         displayDuration();
+//         setSliderMax();
+// })
 
 if (audio.readyState > 0) {
     displayDuration();
     setSliderMax();
-    displayBufferedAmount();
+
 } else {
     audio.addEventListener('loadedmetadata', () => {
         displayDuration();
         setSliderMax();
-        displayBufferedAmount();
+
     });
 }
 
-audio.addEventListener('progress', displayBufferedAmount);
 
 // set the curren time of podcast
 const currentTimeContainer = document.getElementById('current-time');
 
-seekSlider.addEventListener('input', () => {
-  currentTimeContainer.textContent = calculateTime(seekSlider.value);
-  if(!audio.paused) {
-    cancelAnimationFrame(rAF);
-  }
-});
-
 // to show the progress bar change by audio progress
-seekSlider.addEventListener('change', () => {
-    audio.currentTime = seekSlider.value;
+seekSlider.addEventListener('input', () => {
+
     if(!audio.paused) {
         cancelAnimationFrame(rAF);
-      }
-  });
+        currentTimeContainer.textContent = calculateTime(seekSlider.value);
+        audio.currentTime = seekSlider.value;
+    }
+});
 
-  audio.addEventListener('timeupdate', () => {
-    seekSlider.value = Math.floor(audio.currentTime);
-  });
+// seekSlider.addEventListener('canplaythrough', () => {
+
+
+//     if(!audio.paused) {
+//         requestAnimationFrame(whilePlaying);
+
+//         console.log(audio.currentTime);
+//     }
+
+// });
 
 // control the volume of the podcast
-const volumeSlider = document.getElementById('volume-control');
-const outputContainer = document.getElementById('volume-output');
+let volumeSlider = document.getElementById('volume-control');
+let outputContainer = document.getElementById('volume-output');
 
 volumeSlider.addEventListener('input', (e) => {
-  const value = e.target.value;
-
+  let value = e.target.value;
   outputContainer.textContent = value;
   audio.volume = value / 100;
 });

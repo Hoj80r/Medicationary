@@ -512,3 +512,7 @@ button{
 
 }
 /* podcast player styles */
+
+audio::-webkit-media-controls-panel{
+    background-color: rgba(248,249,250,1);
+}
