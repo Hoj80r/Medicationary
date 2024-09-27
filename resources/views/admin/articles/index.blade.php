@@ -89,6 +89,12 @@
                     {{$posts->links()}}
                 </ul>
             </div>
+            {{-- pagination --}}
+            <nav aria-label="Page navigation example" dir="ltr">
+                <ul class="pagination justify-content-center">
+                    {{$posts->links()}}
+                </ul>
+            </nav>
         </div>
 
     </div>
