@@ -70,7 +70,7 @@
   {{-- pagination --}}
   <nav aria-label="Page navigation example" dir="ltr">
     <ul class="pagination justify-content-center">
-        {{$posts->links()}}
+        {{$podcasts->links()}}
     </ul>
 </nav>
 @endsection

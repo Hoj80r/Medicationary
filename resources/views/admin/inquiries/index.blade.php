@@ -89,7 +89,7 @@
     </div>
     <nav aria-label="Page navigation example" dir="ltr">
         <ul class="pagination justify-content-center">
-            {{$posts->links()}}
+            {{$inquiries->links()}}
         </ul>
     </nav>
 @endsection

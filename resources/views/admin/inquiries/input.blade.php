@@ -47,7 +47,7 @@
 </div>
 <nav aria-label="Page navigation example" dir="ltr">
     <ul class="pagination justify-content-center">
-        {{$posts->links()}}
+        {{$questions->links()}}
     </ul>
 </nav>
 @endsection
