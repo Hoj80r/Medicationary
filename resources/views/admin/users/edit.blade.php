@@ -44,14 +44,14 @@
                 <!-- role -->
                 <div class="mt-5 d-flex flex-column text-center ">
                     <div class="form-group ">
-                        <textarea name="description" id="editor" cols="50" rows="5" placeholder="لطفا متن مورد نظر خودتان را وارد کنید"></textarea>
+                        <textarea name="description" id="editor" cols="50" rows="5" placeholder="لطفا متن مورد نظر خودتان را وارد کنید">{{$user->description}}</textarea>
                     </div>
                     <div class="form-group">
                        {{-- <label>نقش کاربری</label>--}}
                         <select class="form-control mt-4 d-inline w-25 text-center " name="role">
-                            <option value="user" >کاربر</option>
+                            <option value="user" {{$user->role == 'user' ? 'selected' : ''}} >کاربر</option>
                             {{--   <option value="2">طراح و فروشنده</option>--}}
-                            <option value="admin" >ادمین</option>
+                            <option value="admin" {{$user->role == 'admin' ? 'selected' : ''}} >ادمین</option>
                         </select>
                     </div>
                 </div>
