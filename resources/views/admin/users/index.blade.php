@@ -69,13 +69,14 @@
                 @endforeach
 
             </div>
-
+                {{-- pagination --}}
+                {{$users->links()}}
         </div>
 
+
     </div>
-    <nav aria-label="Page navigation example" dir="ltr">
-        <ul class="pagination justify-content-center">
-            {{$users->links()}}
-        </ul>
-    </nav>
+
+
+
+
 @endsection

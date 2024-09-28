@@ -27,7 +27,7 @@ class WeblogController extends Controller
 
     public function blog(){
 
-        $posts = Post::paginate(9);
+        $posts = Post::paginate(5);
 
         return view('frontend.blog', compact('posts'));
     }

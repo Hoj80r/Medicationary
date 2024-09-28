@@ -43,11 +43,9 @@
 
         </div>
         @endforeach
+        {{--        pagination--}}
+        {{$questions->links()}}
     </div>
 </div>
-<nav aria-label="Page navigation example" dir="ltr">
-    <ul class="pagination justify-content-center">
-        {{$questions->links()}}
-    </ul>
-</nav>
+
 @endsection

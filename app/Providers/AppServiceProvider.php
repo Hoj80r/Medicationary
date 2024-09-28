@@ -3,6 +3,7 @@
 namespace App\Providers;
 
 use Carbon\Carbon;
+use Illuminate\Pagination\Paginator;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
@@ -31,5 +32,9 @@ class AppServiceProvider extends ServiceProvider
             $timestamp = jmktime($hour, $minute, $second, $month, $day, $year);
             return self::createFromTimestamp($timestamp);
         });
+
+        Paginator::defaultView('vendor.pagination.bootstrap-5');
+
+        Paginator::defaultSimpleView('vendor.pagination.bootstrap-5');
     }
 }

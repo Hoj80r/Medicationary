@@ -83,13 +83,10 @@
 
             </div>
             @endforeach
-
+            {{-- pagination  --}}
+            {{$inquiries->links()}}
         </div>
 
     </div>
-    <nav aria-label="Page navigation example" dir="ltr">
-        <ul class="pagination justify-content-center">
-            {{$inquiries->links()}}
-        </ul>
-    </nav>
+
 @endsection

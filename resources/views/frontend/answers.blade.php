@@ -32,9 +32,5 @@
 
   @endforeach
   {{-- pagination --}}
-  <nav aria-label="Page navigation example" dir="ltr">
-    <ul class="pagination justify-content-center">
-        {{$responses->links()}}
-    </ul>
-</nav>
+  {{$responses->links()}}
 @endsection

@@ -34,9 +34,5 @@
       @endforeach
     </div>
     {{-- pagination --}}
-    <nav aria-label="Page navigation example" dir="ltr">
-        <ul class="pagination justify-content-center">
-            {{$webinars->links()}}
-        </ul>
-    </nav>
+   {{$webinars->links()}}
 @endsection

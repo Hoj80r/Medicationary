@@ -18,7 +18,7 @@ class PostController extends Controller
     {
         $currentUser = auth()->user();
 
-        $posts = Post::latest()->with('user')->paginate(3);
+        $posts = Post::latest()->with('user')->paginate(5);
 
         return view('admin.articles.index', compact('currentUser', 'posts'));
     }

@@ -17,7 +17,7 @@ class UsersController extends Controller
 
         $currentUser = auth()->user();
 
-        $users = User::paginate(10);
+        $users = User::paginate(5);
 
         return view('admin.users.index', compact('users', 'currentUser'));
     }

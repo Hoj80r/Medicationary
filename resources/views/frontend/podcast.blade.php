@@ -68,9 +68,5 @@
 
   </div>
   {{-- pagination --}}
-  <nav aria-label="Page navigation example" dir="ltr">
-    <ul class="pagination justify-content-center">
-        {{$podcasts->links()}}
-    </ul>
-</nav>
+  {{$podcasts->links()}}
 @endsection
